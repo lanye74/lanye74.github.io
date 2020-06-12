@@ -1,0 +1,61 @@
+/* General */
+
+tab-container {
+	width: 100vw; /* padding */
+	height: 90%;
+
+	position: absolute;
+
+	/* to position... */
+	top: 10%;
+	left: 0;
+}
+
+tab-content {
+	display: none;
+
+	grid-template-columns: repeat(auto-fit, minmax(var(--shade-size), 1fr));
+	grid-template-rows: auto;
+	gap: 1rem;
+
+	font-size: 150%;
+
+	padding: 2.5rem;
+
+	justify-items: center;
+	align-items: center;
+}
+
+tab-content {display: grid;}
+
+tab-content#default { /* Other tab contents are grids; this overrides */
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	justify-content: center;
+}
+
+body::-webkit-scrollbar {
+	/* width: 12px; */
+	display: none;
+}
+
+/* body::-webkit-scrollbar-thumb {
+	background: var(--scroll-thumb);
+}
+
+body::-webkit-scrollbar-track {
+	background: var(--scroll-track);
+} */
+
+
+h1#logo {
+	text-shadow: 0 0 5px #eeea;
+
+	transition: text-shadow var(--transition-time);
+}
+
+h1#logo:hover {
+	text-shadow: 0 0 7px #eeec;
+}

@@ -1,0 +1,23 @@
+body {
+	background: #2c2c2c;
+	color: #eeeeee;
+
+	font: 45px Lato, arial;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	flex-direction: column;
+
+	padding: 0;
+	margin: 0;
+
+	position: absolute;
+	height: 100%;
+	width: 100vw;
+}
+
+small {
+	font-size: 30px;
+}

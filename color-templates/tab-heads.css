@@ -1,0 +1,38 @@
+tab-heads {
+	width: 100vw;
+	height: 10%;
+
+	display: flex;
+	flex-direction: row;
+}
+
+tab-head {
+	width: 25%;
+	height: 100%; /* Relative to the container */
+
+	background: var(--background-color);
+	transition: background var(--transition-time);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	cursor: pointer;
+
+	font-size: 30px;
+}
+
+tab-head:hover {
+	background: var(--tab-hover);
+}
+
+tab-head.active {
+	background: var(--tab-active);
+
+	pointer-events: visible;
+	cursor: default;
+}
+
+tab-head.active:hover {
+	background: var(--tab-hover-active);
+}

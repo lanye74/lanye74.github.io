@@ -1,0 +1,303 @@
+/* What a fun file */
+
+color { /* aaaaa */
+	width: var(--shade-size);
+	height: var(--shade-size);
+
+	transition: transform, background-color, var(--transition-time);
+
+	cursor: pointer;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	z-index: 1;
+}
+
+cover {
+	position: absolute;
+	width: var(--shade-size);
+	height: var(--shade-size);
+
+	background: #000a;
+
+	opacity: 0;
+
+	transition: opacity var(--transition-time);
+
+	z-index: 2;
+}
+
+color text {
+	transition: opacity var(--transition-time);
+	opacity: 0;
+	
+	padding: 15px; /* extend bounding box */
+
+	z-index: 3;
+}
+
+color:hover {
+	transform: scale(var(--scale-amount));
+}
+
+color:hover cover, color:hover text {
+	opacity: 1;
+}
+
+#w0 {
+	background-color: #000;
+}
+
+#w1 {
+	background-color: #111;
+}
+
+#w2 {
+	background-color: #222;
+}
+
+#w3 {
+	background-color: #333;
+}
+
+#w4 {
+	background-color: #444;
+}
+
+#w5 {
+	background-color: #555;
+}
+
+#w6 {
+	background-color: #666;
+}
+
+#w7 {
+	background-color: #777;
+}
+
+#w8 {
+	background-color: #888;
+}
+
+#w9 {
+	background-color: #999;
+}
+
+#wa {
+	background-color: #aaa;
+}
+
+#wb {
+	background-color: #bbb;
+}
+
+#wc {
+	background-color: #ccc;
+}
+
+#wd {
+	background-color: #ddd;
+}
+
+#we {
+	background-color: #eee;
+}
+
+#wf {
+	background-color: #fff;
+}
+
+#r0 {
+	background-color: #000;
+}
+
+#r1 {
+	background-color: #100;
+}
+
+#r2 {
+	background-color: #200;
+}
+
+#r3 {
+	background-color: #300;
+}
+
+#r4 {
+	background-color: #400;
+}
+
+#r5 {
+	background-color: #500;
+}
+
+#r6 {
+	background-color: #600;
+}
+
+#r7 {
+	background-color: #700;
+}
+
+#r8 {
+	background-color: #800;
+}
+
+#r9 {
+	background-color: #900;
+}
+
+#ra {
+	background-color: #a00;
+}
+
+#rb {
+	background-color: #b00;
+}
+
+#rc {
+	background-color: #c00;
+}
+
+#rd {
+	background-color: #d00;
+}
+
+#re {
+	background-color: #e00;
+}
+
+#rf {
+	background-color: #f00;
+}
+
+#g0 {
+	background-color: #000;
+}
+
+#g1 {
+	background-color: #010;
+}
+
+#g2 {
+	background-color: #020;
+}
+
+#g3 {
+	background-color: #030;
+}
+
+#g4 {
+	background-color: #040;
+}
+
+#g5 {
+	background-color: #050;
+}
+
+#g6 {
+	background-color: #060;
+}
+
+#g7 {
+	background-color: #070;
+}
+
+#g8 {
+	background-color: #080;
+}
+
+#g9 {
+	background-color: #090;
+}
+
+#ga {
+	background-color: #0a0;
+}
+
+#gb {
+	background-color: #0b0;
+}
+
+#gc {
+	background-color: #0c0;
+}
+
+#gd {
+	background-color: #0d0;
+}
+
+#ge {
+	background-color: #0e0;
+}
+
+#gf {
+	background-color: #0f0;
+}
+
+#b0 {
+	background-color: #000;
+}
+
+#b1 {
+	background-color: #001;
+}
+
+#b2 {
+	background-color: #002;
+}
+
+#b3 {
+	background-color: #003;
+}
+
+#b4 {
+	background-color: #004;
+}
+
+#b5 {
+	background-color: #005;
+}
+
+#b6 {
+	background-color: #006;
+}
+
+#b7 {
+	background-color: #007;
+}
+
+#b8 {
+	background-color: #008;
+}
+
+#b9 {
+	background-color: #009;
+}
+
+#ba {
+	background-color: #00a;
+}
+
+#bb {
+	background-color: #00b;
+}
+
+#bc {
+	background-color: #00c;
+}
+
+#bd {
+	background-color: #00d;
+}
+
+#be {
+	background-color: #00e;
+}
+
+#bf {
+	background-color: #00f;
+}
