@@ -12,6 +12,12 @@ const transitionTime = parseFloat(getComputedStyle(document.documentElement).get
 
 tabs.forEach(tab => {
 	tab.addEventListener("click", e => {
+		if(tab.id === "home") {
+			window.location.href = window.location.origin;
+
+			return;
+		}
+
 		tabs.forEach(header => {(header.className === "active") ? header.removeAttribute("class") : null}); // removes "active" from all the others (if it's there)
 
 		tab.className = "active"; // sets current one to
@@ -20,12 +26,13 @@ tabs.forEach(tab => {
 	});
 });
 
-colors.forEach(el => {
-	el.addEventListener("click", e => {
+colors.forEach(color => {
+	color.addEventListener("click", e => {
+
 		let temp = document.createElement("input");	// doing this so I can copy
 		document.body.appendChild(temp); // append
 
-		temp.value = pad(el); // set the value to that of the element's "padded" value
+		temp.value = pad(color); // set the value to that of the element's "padded" value
 		temp.select(); document.execCommand("copy"); // select and copy
 
 		document.body.removeChild(temp); // remove; don't need to set display to none since it gets poofed immediately

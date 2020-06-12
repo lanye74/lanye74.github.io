@@ -7,7 +7,6 @@ tab-heads {
 }
 
 tab-head {
-	width: 25%;
 	height: 100%; /* Relative to the container */
 
 	background: var(--background-color);
@@ -20,6 +19,8 @@ tab-head {
 	cursor: pointer;
 
 	font-size: 30px;
+
+	color: var(--text-color);
 }
 
 tab-head:hover {
@@ -35,4 +36,13 @@ tab-head.active {
 
 tab-head.active:hover {
 	background: var(--tab-hover-active);
+}
+
+
+tab-head {
+	width: calc(calc(100% - var(--home-width)) / 4);
+}
+
+tab-head#home {
+	width: var(--home-width);
 }

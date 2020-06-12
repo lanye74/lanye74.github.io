@@ -10,9 +10,12 @@
 
 	--transition-time: 0.3s;
 
+	--scale-amount: 1.03;
 	--shade-size: 300px;
 
-	--scale-amount: 1.05;
+
+
+	--home-width: 10%;
 	
 	/* --scroll-thumb: #616161;
 	--scroll-track: #414141; */
@@ -40,4 +43,8 @@ span, h1 {
 ::selection {
 	background-color: var(--text-color-selection);
 	color: var(--background-color);
+}
+
+color, tab-heads {
+	user-select: none;
 }
