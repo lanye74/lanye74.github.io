@@ -18,7 +18,7 @@ tab-head {
 
 	cursor: pointer;
 
-	font-size: 30px;
+	font-size: 200%;
 
 	color: var(--text-color);
 }
@@ -30,7 +30,6 @@ tab-head:hover {
 tab-head.active {
 	background: var(--tab-active);
 
-	pointer-events: visible;
 	cursor: default;
 }
 

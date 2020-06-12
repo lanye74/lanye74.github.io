@@ -13,9 +13,13 @@ color { /* aaaaa */
 	align-items: center;
 
 	z-index: 1;
+
+	border-radius: var(--shade-radius);
 }
 
 cover {
+	border-radius: var(--shade-radius);
+
 	position: absolute;
 	width: var(--shade-size);
 	height: var(--shade-size);

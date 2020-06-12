@@ -1,23 +1,36 @@
-body {
-	background: #2c2c2c;
-	color: #eeeeee;
-
-	font: 45px Lato, arial;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	flex-direction: column;
-
-	padding: 0;
-	margin: 0;
-
-	position: absolute;
-	height: 100%;
-	width: 100vw;
+body::-webkit-scrollbar {
+	/* width: 12px; */
+	display: none;
 }
 
-small {
-	font-size: 30px;
+
+#logo {
+	font-size: 300%;
+
+	text-shadow: 0 0 5px #eeea;
+	transition: text-shadow var(--transition-time);
+
+	width: 100vw;
+
+	text-align: center;
+
+	margin-top: 1em;
+}
+
+#logo:hover {
+	text-shadow: 0 0 7px #eeec;
+}
+
+
+
+#divider {
+	border: none;
+	border-top: 1px solid var(--text-color);
+
+	width: 80%;
+}
+
+#logo, #divider {
+	animation-fill-mode: forwards;
+	animation-duration: var(--fade-in-time);
 }
