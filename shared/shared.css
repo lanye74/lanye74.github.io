@@ -20,9 +20,9 @@ html, body {
 
 	--transition-time: 0.3s;
 
-	--scale-amount: 1.03;
+	--hover-scale-amount: 1.03;
 
-	--fade-in-time: 0.5s;
+	--fade-in-time: 0.3s;
 	
 	/* --scroll-thumb: #616161;
 	--scroll-track: #414141; */
@@ -31,13 +31,4 @@ html, body {
 ::selection {
 	background-color: var(--text-color-selection);
 	color: var(--background-color);
-}
-
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
 }

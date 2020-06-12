@@ -6,7 +6,9 @@
 	--shade-size: 300px;
 	--home-width: 10%;
 
-	--shade-radius: 12px;
+	--shade-border-radius: 14px;
+
+	--scale-begin: 0.7;
 }
 
 span, h1 {

@@ -14,11 +14,11 @@ color { /* aaaaa */
 
 	z-index: 1;
 
-	border-radius: var(--shade-radius);
+	border-radius: var(--shade-border-radius);
 }
 
 cover {
-	border-radius: var(--shade-radius);
+	border-radius: var(--shade-border-radius);
 
 	position: absolute;
 	width: var(--shade-size);
@@ -43,7 +43,7 @@ color text {
 }
 
 color:hover {
-	transform: scale(var(--scale-amount));
+	transform: scale(var(--hover-scale-amount));
 }
 
 color:hover cover, color:hover text {
