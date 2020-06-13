@@ -1,4 +1,4 @@
-@keyframes fadeIn {
+@keyframes scaleFade {
 	from {
 		opacity: 0;
 		transform: scale(var(--scale-begin));
@@ -12,7 +12,7 @@
 }
 
 color {
-	animation: fadeIn var(--fade-in-time) ease-out;
+	animation: scaleFade var(--fade-in-time) ease-out;
 	animation-fill-mode: backwards;
 }
 

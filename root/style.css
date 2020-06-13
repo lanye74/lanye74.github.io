@@ -1,0 +1,57 @@
+:root {
+	--arrow-size: 14px;
+
+	--y-offset: 16px;
+}
+
+body::-webkit-scrollbar {
+	/* width: 12px; */
+	display: none;
+}
+
+body {
+	scrollbar-width: 0;
+}
+
+#logo {
+	font-size: 300%;
+
+	text-shadow: 0 0 5px #eeea;
+	transition: text-shadow var(--transition-time);
+
+	width: 100vw;
+
+	text-align: center;
+
+	margin-top: 1em;
+}
+
+#logo:hover {
+	text-shadow: 0 0 7px #eeec;
+}
+
+
+
+#divider {
+	border: none;
+	border-top: 2px solid var(--grayer-color);
+
+	border-radius: 2px;
+
+	width: 80%;
+}
+
+
+#divider::after {
+	content: "";
+
+	left: 50%;
+
+	position: absolute;
+
+	transform: translateX(-50%);
+
+	border-left: var(--arrow-size) solid transparent;
+    border-right: var(--arrow-size) solid transparent;
+    border-top: var(--arrow-size) solid var(--grayer-color);
+}
