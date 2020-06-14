@@ -56,14 +56,8 @@ body {
     border-top: var(--arrow-size) solid var(--grayer-color);
 }
 
-.construction {
-	font-weight: 600;
-	color: #fad91f;
-}
-
-
 .text {
-	padding: 3em;
+	padding: 3em 10% 3em 10%;
 }
 
 .text p {
@@ -76,14 +70,26 @@ body {
 }
 
 
-@media screen and (max-width: 720px) {
-	.text {
-		display: flex;
+.construction {
+	font-weight: 600;
+	color: #fad91f;
+}
 
-		align-items: center;
-		justify-content: center;
-	}
+.fun {
+	font-weight: 600;
+}
+
+.sign {
+	font-style: italic;
+	font-size: 150% !important;
+
+	text-align: right;
+}
+
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
 	.text p {
-		text-align: center;
+		margin-top: 1.5em;
+		margin-bottom: 1.5em;
 	}
 }

@@ -33,18 +33,15 @@
 
 
 #logo, #divider {
-	animation: bigFadeUp var(--slow-speed) ease-out;
-	animation-fill-mode: backwards;
+	animation: bigFadeUp var(--slow-speed) ease-out backwards;
 }
 
 #divider::after {
-	animation: arrowDown var(--medium-speed) ease-out;
-	animation-fill-mode: backwards;
+	animation: arrowDown var(--medium-speed) ease-out backwards;
 }
 
 p { 
-	animation: smallFadeUp var(--medium-speed) ease-out;
-	animation-fill-mode: backwards;
+	animation: smallFadeUp var(--medium-speed) ease-out backwards;
 }
 
 
@@ -60,7 +57,7 @@ p {
 	animation-delay: calc(3.5 * var(--slow-speed));
 }
 
-
+/* #region animate paragraphs */
 .text p:nth-child(1) {
 	animation-delay: calc(5 * var(--slow-speed));
 }
@@ -68,3 +65,19 @@ p {
 .text p:nth-child(2) {
 	animation-delay: calc(5.5 * var(--slow-speed));
 }
+
+.text p:nth-child(3) {
+	animation-delay: calc(6 * var(--slow-speed));
+}
+
+.sign {
+	animation: bigFadeUp var(--medium-speed) ease-out backwards;
+	animation-delay: calc(7 * var(--slow-speed));
+}
+/* #endregion */
+
+
+/* created using code
+
+function pAnimGen(n){let c="";for(let i=1;i<=n;i++){c+=`.text p:nth-child(${i}) {\n\tanimation-delay: calc(${5+((i-1)/2)} * var(--slow-speed));\n}\n\n`;}let e=document.createElement("textarea");document.body.appendChild(e);e.value=c;e.select();document.execCommand("copy");document.body.removeChild(e)}
+*/
