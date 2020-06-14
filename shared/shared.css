@@ -7,7 +7,6 @@ html, body {
 
 	font: 100% arial; /* basically a fallback */
 
-	width: 100%;
 	height: 100vw;
 }
 
@@ -32,8 +31,8 @@ html, body {
 	--medium-y-offset: 8px;
 	--small-y-offset: 4px;
 	
-	/* --scroll-thumb: #616161;
-	--scroll-track: #414141; */
+	--scroll-thumb: #616161;
+	--scroll-track: #414141;
 }
 
 ::selection {
@@ -80,4 +79,19 @@ html, body {
 	font-size: 85%;
 	margin-top: 8px;
 	font-style: italic;
+}
+
+
+
+
+body::-webkit-scrollbar {
+	width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: var(--scroll-thumb);
+}
+
+body::-webkit-scrollbar-track {
+	background: var(--scroll-track);
 }

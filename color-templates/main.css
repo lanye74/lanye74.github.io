@@ -20,3 +20,8 @@ color, tab-heads {
 tab-heads {
 	font-family: Lato !important;
 }
+
+
+#logo-text, #logo-sub-text {
+	text-align: center;
+}

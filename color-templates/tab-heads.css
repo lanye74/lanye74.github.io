@@ -4,6 +4,12 @@ tab-heads {
 
 	display: flex;
 	flex-direction: row;
+
+	position: fixed;
+
+	z-index: 5;
+
+	background: var(--background-color);
 }
 
 tab-head {

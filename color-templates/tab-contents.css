@@ -1,14 +1,11 @@
 /* General */
 
 tab-container {
-	width: 100vw; /* padding */
+	width: 100%; /* padding */
 	height: 90%;
 
-	position: absolute;
-
-	/* to position... */
 	top: 10%;
-	left: 0;
+	position: absolute;
 }
 
 tab-content {
@@ -35,19 +32,6 @@ tab-content#default { /* Other tab contents are grids; this overrides */
 	align-items: center;
 	justify-content: center;
 }
-
-body::-webkit-scrollbar {
-	/* width: 12px; */
-	display: none;
-}
-
-/* body::-webkit-scrollbar-thumb {
-	background: var(--scroll-thumb);
-}
-
-body::-webkit-scrollbar-track {
-	background: var(--scroll-track);
-} */
 
 
 h1#logo {
