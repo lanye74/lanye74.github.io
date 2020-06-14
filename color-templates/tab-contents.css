@@ -53,7 +53,7 @@ body::-webkit-scrollbar-track {
 h1#logo {
 	text-shadow: 0 0 5px #eeea;
 
-	transition: text-shadow var(--transition-time);
+	transition: text-shadow var(--fast-speed);
 }
 
 h1#logo:hover {

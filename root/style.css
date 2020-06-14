@@ -1,7 +1,5 @@
 :root {
 	--arrow-size: 14px;
-
-	--y-offset: 16px;
 }
 
 body::-webkit-scrollbar {
@@ -17,7 +15,7 @@ body {
 	font-size: 300%;
 
 	text-shadow: 0 0 5px #eeea;
-	transition: text-shadow var(--transition-time);
+	transition: text-shadow var(--fast-speed);
 
 	width: 100vw;
 
@@ -38,6 +36,8 @@ body {
 
 	border-radius: 2px;
 
+	margin-bottom: 2em;
+
 	width: 80%;
 }
 
@@ -54,4 +54,23 @@ body {
 	border-left: var(--arrow-size) solid transparent;
     border-right: var(--arrow-size) solid transparent;
     border-top: var(--arrow-size) solid var(--grayer-color);
+}
+
+.construction {
+	font-weight: 600;
+	color: #fad91f;
+}
+
+
+.text {
+	padding: 3em;
+}
+
+.text p {
+	font-size: 125%;
+
+	margin-top: 2em;
+	margin-bottom: 2em;
+
+	line-height: 1.3;
 }

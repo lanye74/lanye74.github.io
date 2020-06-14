@@ -4,7 +4,7 @@ color { /* aaaaa */
 	width: var(--shade-size);
 	height: var(--shade-size);
 
-	transition: transform, background-color, var(--transition-time);
+	transition: transform var(--fast-speed), background-color var(--medium-speed);
 
 	cursor: pointer;
 
@@ -28,13 +28,13 @@ cover {
 
 	opacity: 0;
 
-	transition: opacity var(--transition-time);
+	transition: opacity var(--fast-speed);
 
 	z-index: 2;
 }
 
 color text {
-	transition: opacity var(--transition-time);
+	transition: opacity var(--fast-speed);
 	opacity: 0;
 	
 	padding: 15px; /* extend bounding box */

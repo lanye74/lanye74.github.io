@@ -1,7 +1,18 @@
-@keyframes fadeUp {
+@keyframes bigFadeUp {
 	from {
 		opacity: 0;
-		transform: translateY(var(--y-offset));
+		transform: translateY(var(--large-y-offset));
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes smallFadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(var(--medium-y-offset));
 	}
 	to {
 		opacity: 1;
@@ -12,7 +23,7 @@
 @keyframes arrowDown {
 	from {
 		opacity: 0;
-		transform: translateY(calc(-1.5 * var(--y-offset))) translateX(-50%);
+		transform: translateY(calc(-1.5 * var(--medium-y-offset))) translateX(-50%);
 	}
 	to {
 		opacity: 1;
@@ -22,25 +33,38 @@
 
 
 #logo, #divider {
-	animation: fadeUp var(--slow-fade-time) ease-out;
+	animation: bigFadeUp var(--slow-speed) ease-out;
 	animation-fill-mode: backwards;
 }
 
 #divider::after {
-	animation: arrowDown var(--slow-fade-time) ease-out;
+	animation: arrowDown var(--medium-speed) ease-out;
 	animation-fill-mode: backwards;
 }
 
+p { 
+	animation: smallFadeUp var(--medium-speed) ease-out;
+	animation-fill-mode: backwards;
+}
 
 
 #logo {
-	animation-delay: calc(1 * var(--slow-fade-time));
+	animation-delay: calc(1 * var(--slow-speed));
 }
 
 #divider {
-	animation-delay: calc(2 * var(--slow-fade-time));
+	animation-delay: calc(2.5 * var(--slow-speed));
 }
 
 #divider::after {
-	animation-delay: calc(3.5 * var(--slow-fade-time));
+	animation-delay: calc(3.5 * var(--slow-speed));
+}
+
+
+.text p:nth-child(1) {
+	animation-delay: calc(5 * var(--slow-speed));
+}
+
+.text p:nth-child(2) {
+	animation-delay: calc(5.5 * var(--slow-speed));
 }

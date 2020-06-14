@@ -8,7 +8,7 @@ let origText = "";
 let textOut = false;
 let textIn = false;
 
-const transitionTime = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--transition-time").slice(1, 4));
+const transitionTime = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--fast-speed").slice(1, 4));
 
 tabs.forEach(tab => {
 	tab.addEventListener("click", e => {

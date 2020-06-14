@@ -10,7 +10,7 @@ tab-head {
 	height: 100%; /* Relative to the container */
 
 	background: var(--background-color);
-	transition: background var(--transition-time);
+	transition: background var(--fast-speed);
 
 	display: flex;
 	align-items: center;

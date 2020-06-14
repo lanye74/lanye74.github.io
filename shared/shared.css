@@ -5,9 +5,10 @@ html, body {
 	background: var(--background-color);
 	color: var(--text-color);
 
-	font: 100% Lato, arial;
+	font: 100% arial; /* basically a fallback */
 
-	height: 100%;
+	width: 100%;
+	height: 100vw;
 }
 
 :root {
@@ -23,11 +24,13 @@ html, body {
 
 	--hover-scale-amount: 1.03;
 
-	--transition-time: 0.3s;
+	--fast-speed: 0.3s;
+	--medium-speed: 0.6s;
+	--slow-speed: 1s;
 
-	--fade-in-time: 0.3s;
-	--med-fade-time: 0.6s;
-	--slow-fade-time: 1s;
+	--large-y-offset: 16px;
+	--medium-y-offset: 8px;
+	--small-y-offset: 4px;
 	
 	/* --scroll-thumb: #616161;
 	--scroll-track: #414141; */
@@ -45,4 +48,36 @@ html, body {
 	to {
 		opacity: 1;
 	}
+}
+
+
+
+@font-face {
+	font-family: "Lato";
+	src: url("https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wXg.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2") format('woff2');
+}
+
+* {
+	-webkit-tap-highlight-color: transparent;
+
+	font-family: Roboto;
+}
+
+*[font="Lato"], #logo, #logo-text, #logo-sub-text {
+	font-family: Lato;
+}
+
+#logo {
+	margin-bottom: 1em;
+}
+
+#logo-sub-text {
+	font-size: 85%;
+	margin-top: 8px;
+	font-style: italic;
 }

@@ -15,3 +15,8 @@ span, h1 {
 color, tab-heads {
 	user-select: none;
 }
+
+
+tab-heads {
+	font-family: Lato !important;
+}
