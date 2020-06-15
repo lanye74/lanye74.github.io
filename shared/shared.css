@@ -15,6 +15,7 @@ html, body {
 	--text-color: #eeeeee;
 	--grayer-color: #cccccc;
 
+	--not-black: #151515;
 	--dark-accent: #343434;
 	--medium-accent: #393939;
 	--light-accent: #3e3e3e;
@@ -67,7 +68,7 @@ html, body {
 	font-family: Roboto;
 }
 
-*[font="Lato"], #logo, #logo-text, #logo-sub-text {
+*[font="Lato"], #logo, #logo-text, #logo-sub-text, tile name {
 	font-family: Lato;
 }
 

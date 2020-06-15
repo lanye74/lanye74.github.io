@@ -1,7 +1,7 @@
 const tabContainer = document.getElementsByTagName("tab-heads")[0];
 const tabs = Array.from(document.getElementsByTagName("tab-head")); // converts into iterable array
 const content = document.getElementsByTagName("tab-content")[0]; // same here
-const colors = Array.from(document.getElementsByTagName("color"));
+const shades = Array.from(document.getElementsByTagName("color"));
 const texts = Array.from(document.getElementsByTagName("text"));
 
 let origText = "";
@@ -22,11 +22,13 @@ tabs.forEach(tab => {
 
 		tab.className = "active"; // sets current one to
 
-		transition(e.target);
+		shades.forEach(color => {
+			color.id = `${e.target.id.slice(0, 1)}${color.id.slice(1, 2)}`; /* css transitions it by itself because  y a y */
+		});
 	});
 });
 
-colors.forEach(color => {
+shades.forEach(color => {
 	color.addEventListener("click", e => {
 
 		let temp = document.createElement("input");	// doing this so I can copy
@@ -58,30 +60,3 @@ function pad(el) {
 		}
 	}
 }
-
-function transition(tabElem) {
-	let color = tabElem.id;
-	let newColor = color.slice(0, 1);
-
-	colors.forEach(color => {
-		color.id = `${newColor}${color.id.slice(1, 2)}`;
-	});
-
-
-}
-
-/* 'oh god why did you do it like this,' I hear you ask
-
-well that's a great question
-
-I don't know
-
-well actually I do
-
-it's because CSS was getting annoying so JS was easier (more experience)
-
-I wanted a nice fade from one color to the next
-
-so changing the ID was easier than a bunch of tab contents to fade
-
-*/

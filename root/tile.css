@@ -1,0 +1,70 @@
+tile-container {
+	display: grid;
+
+	grid-template-columns: repeat(auto-fit, minmax(var(--tile-width), 1fr));
+	grid-template-rows: auto;
+	gap: 1rem;
+
+	font-size: 150%;
+
+	padding: 2.5rem;
+
+	justify-items: center;
+	align-items: center;
+}
+
+tile {
+	width: var(--tile-width);
+	height: var(--tile-height);
+
+	cursor: pointer;
+
+	padding: 1em;
+
+	border: 1px solid transparent;
+
+	border-radius: 12px;
+
+
+	transition: border, box-shadow, transform, var(--medium-speed);
+}
+
+tile:hover {
+	border: 1px solid var(--not-black);
+
+	box-shadow: 0 0 0.5em var(--not-black);
+
+	transform: translateY(-4px);
+}
+
+tile hover-text {
+	position: absolute;
+	width: var(--tile-width);
+	height: var(--tile-width);
+
+	background: #000a;
+
+	opacity: 0;
+
+	transition: opacity var(--fast-speed);
+
+	transform: translateY(calc(-1 * var(--tile-width) - 6px)); /* ???? */
+
+	z-index: 5;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	pointer-events: fill;
+}
+
+hover-text:hover {
+	opacity: 1;
+}
+
+#templated img {
+	image-rendering: pixelated;
+	width: 100%;
+	height: 100%;
+}

@@ -84,3 +84,7 @@ text-container { /* allows this to not be useless */
 	display: flex;
 	flex-direction: column;
 }
+
+h1, tile * {
+	user-select: none;
+}
