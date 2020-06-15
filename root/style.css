@@ -1,14 +1,8 @@
 :root {
 	--arrow-size: 14px;
-}
 
-body::-webkit-scrollbar {
-	/* width: 12px; */
-	display: none;
-}
-
-body {
-	scrollbar-width: 0;
+	--tile-width: 300px;
+	--title-height: 400px;
 }
 
 #logo {
@@ -56,15 +50,15 @@ body {
     border-top: var(--arrow-size) solid var(--grayer-color);
 }
 
-.text {
+text-container, tile-container {
 	padding: 3em 10% 3em 10%;
 }
 
-.text p {
+text-container p {
 	font-size: 125%;
 
-	margin-top: 2em;
-	margin-bottom: 2em;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
 
 	line-height: 1.3;
 }
@@ -87,9 +81,8 @@ body {
 }
 
 
-@media screen and (max-width: 480px) and (orientation: portrait) {
-	.text p {
-		margin-top: 1.5em;
-		margin-bottom: 1.5em;
-	}
+
+text-container { /* allows this to not be useless */
+	display: flex;
+	flex-direction: column;
 }

@@ -6,8 +6,6 @@ html, body {
 	color: var(--text-color);
 
 	font: 100% arial; /* basically a fallback */
-
-	height: 100vw;
 }
 
 :root {
@@ -22,6 +20,8 @@ html, body {
 	--tab-hover-active: #3e3e3e;
 
 	--hover-scale-amount: 1.03;
+
+	--short-delay: 0.1s;
 
 	--fast-speed: 0.3s;
 	--medium-speed: 0.6s;
@@ -94,4 +94,38 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-track {
 	background: var(--scroll-track);
+}
+
+
+@keyframes bigFadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(var(--large-y-offset));
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes mediumFadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(var(--medium-y-offset));
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes smallFadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(var(--small-y-offset));
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
 }

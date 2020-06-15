@@ -1,0 +1,80 @@
+@keyframes scaleFade {
+	from {
+		opacity: 0;
+		transform: scale(var(--scale-begin));
+		pointer-events: none;
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+		pointer-events: all;
+	}
+}
+
+color {
+	animation: scaleFade var(--fast-speed) ease-out backwards;
+}
+
+#colors color:nth-child(1) {
+	animation-delay: calc(var(--short-delay) * 1);
+}
+
+#colors color:nth-child(2) {
+	animation-delay: calc(var(--short-delay) * 2);
+}
+
+#colors color:nth-child(3) {
+	animation-delay: calc(var(--short-delay) * 3);
+}
+
+#colors color:nth-child(4) {
+	animation-delay: calc(var(--short-delay) * 4);
+}
+
+#colors color:nth-child(5) {
+	animation-delay: calc(var(--short-delay) * 5);
+}
+
+#colors color:nth-child(6) {
+	animation-delay: calc(var(--short-delay) * 6);
+}
+
+#colors color:nth-child(7) {
+	animation-delay: calc(var(--short-delay) * 7);
+}
+
+#colors color:nth-child(8) {
+	animation-delay: calc(var(--short-delay) * 8);
+}
+
+#colors color:nth-child(9) {
+	animation-delay: calc(var(--short-delay) * 9);
+}
+
+#colors color:nth-child(10) {
+	animation-delay: calc(var(--short-delay) * 10);
+}
+
+#colors color:nth-child(11) {
+	animation-delay: calc(var(--short-delay) * 11);
+}
+
+#colors color:nth-child(12) {
+	animation-delay: calc(var(--short-delay) * 12);
+}
+
+#colors color:nth-child(13) {
+	animation-delay: calc(var(--short-delay) * 13);
+}
+
+#colors color:nth-child(14) {
+	animation-delay: calc(var(--short-delay) * 14);
+}
+
+#colors color:nth-child(15) {
+	animation-delay: calc(var(--short-delay) * 15);
+}
+
+#colors color:nth-child(16) {
+	animation-delay: calc(var(--short-delay) * 16);
+}

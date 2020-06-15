@@ -9,7 +9,7 @@ tab-container {
 }
 
 tab-content {
-	display: none;
+	display: grid;
 
 	grid-template-columns: repeat(auto-fit, minmax(var(--shade-size), 1fr));
 	grid-template-rows: auto;
@@ -18,12 +18,7 @@ tab-content {
 	font-size: 150%;
 
 	padding: 2.5rem;
-
-	justify-items: center;
-	align-items: center;
 }
-
-tab-content {display: grid;}
 
 tab-content#default { /* Other tab contents are grids; this overrides */
 	display: flex;
