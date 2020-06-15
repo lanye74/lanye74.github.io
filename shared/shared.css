@@ -111,6 +111,7 @@ body::-webkit-scrollbar-track {
 
 @keyframes mediumFadeUp {
 	from {
+		cursor: default;
 		opacity: 0;
 		transform: translateY(var(--medium-y-offset));
 	}

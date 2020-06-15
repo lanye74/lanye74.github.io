@@ -1,8 +1,7 @@
 :root {
 	--arrow-size: 14px;
 
-	--tile-width: 300px;
-	--title-height: 400px;
+	--tile-size: 256px;
 }
 
 #logo {
@@ -22,7 +21,7 @@
 
 
 
-#divider {
+hr {
 	border: none;
 	border-top: 2px solid var(--grayer-color);
 
@@ -34,7 +33,7 @@
 }
 
 
-#divider::after {
+#logo-divider::after {
 	content: "";
 
 	left: 50%;
@@ -87,4 +86,11 @@ text-container { /* allows this to not be useless */
 
 h1, tile * {
 	user-select: none;
+}
+
+#projects {
+	width: 100%;
+	text-align: center;
+
+	font-size: 200%;
 }

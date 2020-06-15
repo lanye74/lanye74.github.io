@@ -1,7 +1,7 @@
 tile-container {
 	display: grid;
 
-	grid-template-columns: repeat(auto-fit, minmax(var(--tile-width), 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(var(--tile-size), 1fr));
 	grid-template-rows: auto;
 	gap: 1rem;
 
@@ -14,7 +14,7 @@ tile-container {
 }
 
 tile {
-	width: var(--tile-width);
+	width: var(--tile-size);
 	height: var(--tile-height);
 
 	cursor: pointer;
@@ -39,8 +39,8 @@ tile:hover {
 
 tile hover-text {
 	position: absolute;
-	width: var(--tile-width);
-	height: var(--tile-width);
+	width: var(--tile-size);
+	height: var(--tile-size);
 
 	background: #000a;
 
@@ -48,7 +48,7 @@ tile hover-text {
 
 	transition: opacity var(--fast-speed);
 
-	transform: translateY(calc(-1 * var(--tile-width) - 6px)); /* ???? */
+	transform: translateY(calc(-1 * var(--tile-size) - 6px)); /* ???? */
 
 	z-index: 5;
 
@@ -63,7 +63,7 @@ hover-text:hover {
 	opacity: 1;
 }
 
-#templated img {
+tile img {
 	image-rendering: pixelated;
 	width: 100%;
 	height: 100%;
