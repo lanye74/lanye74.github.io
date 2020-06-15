@@ -11,8 +11,6 @@
 	text-shadow: 0 0 5px #eeea;
 	transition: text-shadow var(--fast-speed);
 
-	width: 100vw;
-
 	text-align: center;
 
 	margin-top: 1em;

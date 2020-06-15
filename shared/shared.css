@@ -15,9 +15,9 @@ html, body {
 	--text-color: #eeeeee;
 	--grayer-color: #cccccc;
 
-	--tab-hover: #343434;
-	--tab-active: #393939;
-	--tab-hover-active: #3e3e3e;
+	--dark-accent: #343434;
+	--medium-accent: #393939;
+	--light-accent: #3e3e3e;
 
 	--hover-scale-amount: 1.03;
 

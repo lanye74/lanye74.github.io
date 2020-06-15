@@ -30,17 +30,17 @@ tab-head {
 }
 
 tab-head:hover {
-	background: var(--tab-hover);
+	background: var(--dark-accent);
 }
 
 tab-head.active {
-	background: var(--tab-active);
+	background: var(--medium-accent);
 
 	cursor: default;
 }
 
 tab-head.active:hover {
-	background: var(--tab-hover-active);
+	background: var(--light-accent);
 }
 
 
