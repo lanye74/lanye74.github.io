@@ -22,7 +22,7 @@ html, body {
 
 	--hover-scale-amount: 1.03;
 
-	--short-delay: 0.1s;
+	--short-delay: 0.15s;
 
 	--fast-speed: 0.3s;
 	--medium-speed: 0.6s;
@@ -68,7 +68,7 @@ html, body {
 	font-family: Roboto;
 }
 
-*[font="Lato"], #logo, #logo-text, #logo-sub-text, tile name {
+#projects, #logo, #logo-text, #logo-sub-text, tile name {
 	font-family: Lato;
 }
 

@@ -1,0 +1,20 @@
+@keyframes scaleFade {
+	from {
+		opacity: 0;
+		transform: scale(var(--scale-begin));
+		pointer-events: none;
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+		pointer-events: all;
+	}
+}
+
+color {
+	animation: scaleFade var(--fast-speed) ease-out backwards;
+}
+
+tab-heads tab-head {
+	animation: fadeIn var(--medium-speed) ease-out backwards;
+}
