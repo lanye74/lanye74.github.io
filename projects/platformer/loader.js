@@ -1,12 +1,10 @@
-const scripts = ["main"];
+const scripts = ["main", "grids", "level"];
 
-for(let i = 0; i < scripts.length; i++) {
+for (script of scripts) {
 	let s = document.createElement("script");
-	s.src = `js/${scripts[i]}.js`;
+	s.src = `js/${script}.js`;
 
 	document.head.appendChild(s);
 }
 
-
-
-/* simple script loader module so I don't have to uselessly keep index.html open */
+/* simple script loader module */
