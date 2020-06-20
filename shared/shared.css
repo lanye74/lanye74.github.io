@@ -9,16 +9,16 @@ html, body {
 }
 
 :root {
-	--background-color: #2b2b2b;
+	--background-color: #282828;
 	
 	--text-color-selection: #eeeeeefe; /* barely lower alpha so browser doesn't screw it */
 	--text-color: #eeeeee;
 	--grayer-color: #cccccc;
 
-	--not-black: #151515;
-	--dark-accent: #343434;
-	--medium-accent: #393939;
-	--light-accent: #3e3e3e;
+	--not-black: #121212;
+	--dark-accent: #313131;
+	--medium-accent: #363636;
+	--light-accent: #3b3b3b;
 
 	--hover-scale-amount: 1.03;
 
@@ -32,8 +32,8 @@ html, body {
 	--medium-y-offset: 8px;
 	--small-y-offset: 4px;
 	
-	--scroll-thumb: #616161;
-	--scroll-track: #414141;
+	--scroll-thumb: #4d4d4d;
+	--scroll-track: #373737;
 }
 
 ::selection {
@@ -55,11 +55,19 @@ html, body {
 @font-face {
 	font-family: "Lato";
 	src: url("https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wXg.woff2") format("woff2");
+
+	font-display: swap;
+	font-style: normal;
+	font-weight: 400;
 }
 
 @font-face {
 	font-family: "Roboto";
-	src: url("https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2") format('woff2');
+	src: url("https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2") format("woff2");
+
+	font-display: swap;
+	font-style: normal;
+	font-weight: 400;
 }
 
 * {
@@ -81,8 +89,6 @@ html, body {
 	margin-top: 8px;
 	font-style: italic;
 }
-
-
 
 
 body::-webkit-scrollbar {

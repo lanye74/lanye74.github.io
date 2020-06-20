@@ -64,6 +64,9 @@ hover-text:hover {
 }
 
 tile img {
+	width: 256px;
+	height: 256px;
+
 	image-rendering: pixelated;
 
 	margin-bottom: 2px;
