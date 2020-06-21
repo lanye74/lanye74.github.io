@@ -1,72 +1,78 @@
 @keyframes arrowDown {
 	from {
-		opacity: 0;
 		transform: translateY(calc(-1.5 * var(--medium-y-offset))) translateX(-50%);
 	}
 	to {
-		opacity: 1;
 		transform: translateX(-50%);
 	}
 }
 
 
-#logo, #logo-divider, #projects, #projects-divider {
+#logo, #projects {
 	animation: bigFadeUp var(--slow-speed) ease-out backwards;
 }
 
-#logo-divider::after {
+divider {
+	animation: centerFadeUp var(--slow-speed) ease-out backwards;
+}
+
+#logo-divider arrow {
 	animation: arrowDown var(--medium-speed) ease-out backwards;
 }
 
+tile {
+	animation: mediumFadeUp var(--medium-speed) ease-out backwards;
+}
+
 p { 
-	animation: mediumFadeUp var(--slow-speed) ease-out backwards;
+	animation: smallFadeUp var(--slow-speed) ease-out backwards;
 }
 
 
+
 #logo {
-	animation-delay: 0;
+	animation-delay: 0s;
 }
 
 #logo-divider {
 	animation-delay: calc(0.5 * var(--slow-speed));
 }
 
-#logo-divider::after {
+#logo-divider arrow {
+	animation-delay: calc(0.5 * var(--slow-speed));
+}
+
+
+
+text-container p:nth-child(1) {
 	animation-delay: calc(1.5 * var(--slow-speed));
 }
 
-/* #region animate paragraphs */
-text-container p:nth-child(1) {
-	animation-delay: calc(2.5 * var(--slow-speed));
-}
-
 text-container p:nth-child(2) {
-	animation-delay: calc(3 * var(--slow-speed));
+	animation-delay: calc(2 * var(--slow-speed));
 }
 
 text-container p:nth-child(3) {
-	animation-delay: calc(3.5 * var(--slow-speed));
+	animation-delay: calc(2.5 * var(--slow-speed));
 }
 
 .sign {
 	animation: bigFadeUp var(--medium-speed) ease-out backwards;
-	animation-delay: calc(4 * var(--slow-speed));
+	animation-delay: calc(3.5 * var(--slow-speed));
 }
-/* #endregion */
+
+
 
 #projects {
-	animation-delay: calc(5 * var(--slow-speed));
+	animation-delay: calc(4.5 * var(--slow-speed));
 }
 
 #projects-divider {
-	animation-delay: calc(5.5 * var(--slow-speed));
+	animation-delay: calc(5 * var(--slow-speed));
 }
 
 
-tile {
-	animation: smallFadeUp var(--medium-speed) ease-out backwards;
-}
 
 tile-container tile:nth-child(1) {
-	animation-delay: calc(6.5 * var(--slow-speed));
+	animation-delay: calc(6 * var(--slow-speed));
 }

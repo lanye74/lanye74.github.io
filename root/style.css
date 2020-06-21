@@ -33,9 +33,7 @@ hr {
 }
 
 
-#logo-divider::after {
-	content: "";
-
+#logo-divider arrow {
 	left: 50%;
 
 	position: absolute;
@@ -93,4 +91,53 @@ h1, tile * {
 	text-align: center;
 
 	font-size: 200%;
+}
+
+skipper {
+	position: fixed;
+
+	background: #000a;
+	padding: 1em;
+
+	border-radius: 1em 0.75em 0.75em 1em;
+
+	top: 92%;
+
+	transform: translateX(-50%);
+	left: 120%;
+
+
+	width: max-content;
+
+	user-select: none;
+	cursor: pointer;
+
+	transition-delay: 1s;
+	transition: left var(--very-slow-speed), transform var(--fast-speed);
+}
+
+body.loaded skipper {
+	left: calc(100% - 4.5rem);
+}
+
+skipper:hover {
+	transform: translateX(-50%) scale(1.05) !important;
+}
+
+skipper.hidden {
+	left: 120% !important;
+
+	pointer-events: none;
+}
+
+
+divider {
+	display: flex;
+	background: var(--grayer-color);
+	height: 1px;
+	width: 80%;
+
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 }

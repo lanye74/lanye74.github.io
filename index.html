@@ -18,27 +18,34 @@
 		<script defer src="root/main.js"></script>
 	</head>
 	<body>
-		<h1 id="logo">LayneTheEpic's Website</h1>
+		<h1 id="logo" ani>LayneTheEpic's Website</h1>
 
-		<hr id="logo-divider">
+		<divider id="logo-divider" ani><arrow ani></arrow></divider>
 
 		<text-container>
-			<p>Hello, and welcome to my website!</p>
-			<p>It's currently <span class="construction">under construction</span>, but more and more will be added over time.</p>
-			<p>Here you can find most of my projects, <span class="fun">have fun!</p><br />
-			<p font="Lato" class="sign">- Layne</p>
+			<p ani>Hello, and welcome to my website!</p>
+			<p ani>It's currently <span class="construction">under construction</span>, but more and more will be added over time.</p>
+			<p ani>Here you can find most of my projects, <span class="fun">have fun!</p><br />
+			<p ani class="sign">- Layne</p>
 		</text-container>
 
-		<h2 id="projects">Projects</h2>
-		<hr id="projects-divider">
+		<h2 id="projects" ani>Projects</h2>
+		<divider id="projects-divider" ani></divider>
 
 
 		<tile-container id="tiles">
-			<tile id="shady">
-				<img alt="Shady Logo" src="assets/shady/shady256.png">
+			<tile id="shady" ani>
+				<img-container>
+					<img alt="Shady Logo" src="assets/shady/shady256.png">
+				</img-container>
+
 				<hover-text>Click to go</hover-text>
 				<name>Shady</name>
 			</tile>
 		</tile-container>
+
+		<skipper>Click to skip</skipper>
+
+		<!-- todo: use tab-index to implement keyboard navigation in a resonable way -->
 	</body>
 </html>
