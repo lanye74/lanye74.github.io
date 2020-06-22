@@ -30,33 +30,29 @@ tabs.forEach(tab => {
 
 shades.forEach(color => {
 	color.addEventListener("click", e => {
-
 		let temp = document.createElement("input");	// doing this so I can copy
 		document.body.appendChild(temp); // append
 
 		temp.value = pad(color); // set the value to that of the element's "padded" value
-		temp.select(); document.execCommand("copy"); // select and copy
+		temp.select(); temp.setSelectionRange(0, 9999); document.execCommand("copy"); // select (setSelectionRange is for mobile) and copy
 
 		document.body.removeChild(temp); // remove; don't need to set display to none since it gets poofed immediately
 	});
 });
 
 function pad(el) {
-	let color = el.id.slice(0, 1);
-	let type = el.id.slice(1, 2);
-
-	switch(color) {
+	switch(el.id.slice(0, 1)) {
 		case "r": {
-			return `#${type.repeat(2)}0000`;
+			return `#${(el.id.slice(1, 2)).repeat(2)}0000`;
 		}
 		case "g": {
-			return `#00${type.repeat(2)}00`;
+			return `#00${(el.id.slice(1, 2)).repeat(2)}00`;
 		}
 		case "b": {
-			return `#0000${type.repeat(2)}`;
+			return `#0000${(el.id.slice(1, 2)).repeat(2)}`;
 		}
 		case "w": {
-			return `#${type.repeat(6)}`;
+			return `#${(el.id.slice(1, 2)).repeat(6)}`;
 		}
 	}
 }

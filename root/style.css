@@ -114,8 +114,7 @@ skipper {
 	user-select: none;
 	cursor: pointer;
 
-	transition-delay: 1s;
-	transition: left var(--very-slow-speed), transform var(--fast-speed), box-shadow var(--fast-speed);
+	transition: left var(--slow-speed), transform var(--fast-speed), box-shadow var(--fast-speed);
 }
 
 body.loaded skipper {

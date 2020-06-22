@@ -13,28 +13,9 @@ projects.forEach(tile => {
 });
 
 skipper.addEventListener("click", _ => {
-	clearInterval(timeSetter);
-	skipAnimatedElems();
+	
 });
 
 document.body.onload = () => {
 	document.body.classList.add("loaded");
-
-	// timeSetter = setInterval(() => {
-	// 	timeKeeper += 0.1;
-	// 	timeKeeper = parseFloat(timeKeeper.toPrecision(2));
-
-	// 	if(timeKeeper == 6) {
-	// 		clearInterval(timeSetter);
-	// 		skipper.className = "hidden";
-	// 	}
-	// }, 100);
-}
-
-function skipAnimatedElems() {
-	// let style = document.createElement("style");
-
-	// style.innerHTML = `[ani] {animation-delay: ${timeKeeper - 0.1}s !important;}`;
-
-	// document.head.appendChild(style);
 }
