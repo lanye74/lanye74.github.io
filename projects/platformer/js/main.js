@@ -4,8 +4,8 @@ const ctx = canvas.getContext("2d");
 const width = 1280;
 const height = 720;
 
-const tileWidth = 10;
-const tileHeight = 10;
+const tileWidth = 40;
+const tileHeight = 40;
 
 const fps = 1;
 

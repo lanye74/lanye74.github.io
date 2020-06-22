@@ -101,6 +101,8 @@ skipper {
 
 	border-radius: 1em 0.75em 0.75em 1em;
 
+	box-shadow: 0 4px 8px #0008;
+
 	top: 92%;
 
 	transform: translateX(-50%);
@@ -113,7 +115,7 @@ skipper {
 	cursor: pointer;
 
 	transition-delay: 1s;
-	transition: left var(--very-slow-speed), transform var(--fast-speed);
+	transition: left var(--very-slow-speed), transform var(--fast-speed), box-shadow var(--fast-speed);
 }
 
 body.loaded skipper {
@@ -122,6 +124,8 @@ body.loaded skipper {
 
 skipper:hover {
 	transform: translateX(-50%) scale(1.05) !important;
+
+	box-shadow: 0 6px 10px #0008;
 }
 
 skipper.hidden {
