@@ -40,6 +40,8 @@ color text {
 	padding: 15px; /* extend bounding box */
 
 	z-index: 3;
+
+	font-size: 30px;
 }
 
 color:hover {

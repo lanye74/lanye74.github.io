@@ -1,8 +1,10 @@
-function drawLevel() {
-	let level = maps[0];
+let level = maps[0];
+ctx.fillStyle = "#ffffff";
 
-	ctx.fillStyle = "#fff";
+function drawLevel() {
 	
+	ctx.clearRect(0, 0, canvas.width, canvas.height)
+
 	for(let y = 0; y < level.length; y++) {
 		for(let x = 0; x < level[y].length; x++) {
 			let tile = level[y][x];
@@ -14,5 +16,5 @@ function drawLevel() {
 }
 
 function draw(x, y) {
-	ctx.fillRect(x * tileWidth, y * tileWidth, tileWidth, tileHeight);
+	ctx.fillRect(x * tile.width, y * tile.height, tile.width, tile.height);
 }

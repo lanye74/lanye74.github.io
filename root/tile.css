@@ -14,8 +14,8 @@ tile-container {
 }
 
 tile {
-	width: var(--tile-size);
-	height: var(--tile-height);
+	width: var(--square-tile-size);
+	height: var(--square-tile-size);
 
 	cursor: pointer;
 

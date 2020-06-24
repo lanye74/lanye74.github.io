@@ -9,7 +9,7 @@ canvas {
 
 	transform: translate(-50%, -50%);
 
-	border: 1px solid var(--text-color);
+	border: 1px solid #ffffff;
 
 	image-rendering: pixelated;
 }

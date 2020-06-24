@@ -1,50 +1,3 @@
-:root {
-	--arrow-size: 14px;
-
-	--tile-size: 256px;
-}
-
-#logo {
-	font-size: 300%;
-
-	text-shadow: 0 0 5px #eeea;
-	transition: text-shadow var(--fast-speed);
-
-	text-align: center;
-
-	margin-top: 1em;
-}
-
-#logo:hover {
-	text-shadow: 0 0 7px #eeec;
-}
-
-
-
-hr {
-	border: none;
-	border-top: 2px solid var(--grayer-color);
-
-	border-radius: 2px;
-
-	margin-bottom: 2em;
-
-	width: 80%;
-}
-
-
-#logo-divider arrow {
-	left: 50%;
-
-	position: absolute;
-
-	transform: translateX(-50%);
-
-	border-left: var(--arrow-size) solid transparent;
-    border-right: var(--arrow-size) solid transparent;
-    border-top: var(--arrow-size) solid var(--grayer-color);
-}
-
 text-container, tile-container {
 	padding: 3em 10% 3em 10%;
 }
@@ -82,16 +35,13 @@ text-container { /* allows this to not be useless */
 	flex-direction: column;
 }
 
-h1, tile * {
+
+
+tile * {
 	user-select: none;
 }
 
-#projects {
-	width: 100%;
-	text-align: center;
 
-	font-size: 200%;
-}
 
 skipper {
 	position: fixed;
@@ -131,16 +81,4 @@ skipper.hidden {
 	left: 120% !important;
 
 	pointer-events: none;
-}
-
-
-divider {
-	display: flex;
-	background: var(--grayer-color);
-	height: 1px;
-	width: 80%;
-
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
 }
