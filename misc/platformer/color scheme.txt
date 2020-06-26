@@ -1,0 +1,5 @@
+Dirt: #2a130c (noise 20-0-70)
+
+Rock: #2a2a2d
+
+Grass: #33fd8e

@@ -15,7 +15,7 @@ tile-container {
 
 tile {
 	width: var(--square-tile-size);
-	height: var(--square-tile-size);
+	/* height: var(--square-tile-size); Let it auto-adjust instead */
 
 	cursor: pointer;
 
