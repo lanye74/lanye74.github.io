@@ -3,7 +3,7 @@ const ctx = c.getContext("2d");
 
 
 const canvas = {
-	width: 1280,
+	width: 1280, // can I make this dynamic? Scrolling?
 	height: 720
 };
 
@@ -19,25 +19,24 @@ const tiles = {
 
 const fps = 60;
 
-
-let skipFrame = false;
-
-
-ctx.fillStyle = "#ffffff";
+let loadingSprites = false;
 
 
-let currentLevel = 1;
+let level = 1;
 
 
 let mainLoop = setInterval(() => {
-	if((Object.keys(tiles).filter(key => !tiles[key] === undefined)).length === 0) // if no properties are null
-	{} else {skipFrame = true; console.log("skipping frame")}
+	if(!Object.values(tiles).includes(undefined)) { // check if any value is undefined
+		loadingSprites = false; // false if all loaded exist
+	} else {
+		loadingSprites = true;
+	}
 
-	if(!skipFrame) {
+	if(!loadingSprites) {
 		// updateLevel();
-		renderLevel(maps[currentLevel - 1]);
+		renderLevel(maps[level - 1]);
 
-		skipFrame = false;
+		loadingSprites = false;
 	}
 }, 1000 / fps);
 
@@ -48,7 +47,5 @@ let mainLoop = setInterval(() => {
 
 	dirt.src = "../../../assets/platformer/dirt.png";
 
-	dirt.onload = () => {console.log('loaded')}
-
-	tiles.dirt = dirt;
+	dirt.onload = () => {tiles.dirt = dirt; console.log("loaded")}
 })();

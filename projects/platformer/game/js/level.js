@@ -1,8 +1,4 @@
 function renderLevel(level) {
-
-
-	ctx.clearRect(0, 0, canvas.width, canvas.height)
-
 	for(let y = 0; y < level.length; y++) {
 		for(let x = 0; x < level[y].length; x++) {
 			let tile = level[y][x];
@@ -14,12 +10,15 @@ function renderLevel(level) {
 }
 
 function draw(type, x, y) {
-	if(typeof type === "string") {
-		ctx.fillStyle = type;
+	if(typeof type === "string") { // A hex code
+		if(ctx.fillStyle !== type) {ctx.fillStyle = type;}
+
 		ctx.fillRect(x * tile.width, y * tile.height, tile.width, tile.height);
-	} else if(typeof type === "object") { // HTMLImageElement
+	}
+	else if(typeof type === "object") { // typeof HTMLImageElement === object
 		ctx.drawImage(type, x * tile.width, y * tile.height);
-	} else {
+	}
+	else {
 		console.error(`Error drawing tile at ${x}, ${y}: ${type} has typeof ${typeof type} and is invalid.`)
 	}
 }
