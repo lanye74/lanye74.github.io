@@ -1,51 +1,63 @@
-const c = document.getElementById("canv");
-const ctx = c.getContext("2d");
 
 
-const canvas = {
-	width: 1280, // can I make this dynamic? Scrolling?
-	height: 720
-};
-
-const tile = {
-	width: 40,
-	height: 40
-};
-
-const tiles = {
-	dirt: undefined,
-	sky: "#61c8e7"
-};
-
-const fps = 60;
-
-let loadingSprites = false;
-
-
-let level = 1;
-
-
-let mainLoop = setInterval(() => {
-	if(!Object.values(tiles).includes(undefined)) { // check if any value is undefined
+tileCheckLoop = setInterval(() => {
+	if(!Object.values(tiles).includes(undefined)) { // if no tiles are undefined
 		loadingSprites = false; // false if all loaded exist
 	} else {
 		loadingSprites = true;
 	}
 
 	if(!loadingSprites) {
-		// updateLevel();
+		// I was going to have the main loop set in this if statement, but...
+		// efficiency is king. Even though it's really not necessary to have a seperate loop,
+		// as processing power is really good now, optimization is just- *chef's kiss*
+
+		console.log("All tiles loaded, beginning to draw!");
+
+		player = new Player(0, 0);
+
+		clearInterval(tileCheckLoop);
+		setMainLoop();
+	}
+}, 1000 / 10); // 10 times/sec
+
+
+
+
+(() => { // Define tiles lambda function
+
+	console.log("Loading tiles...");
+
+	console.log(`${getLoadedTiles()} / ${Object.keys(tiles).length} loaded - finished load of sky tile`);
+	
+	// dirt
+
+	let dirt = new Image(tile.width, tile.height);
+	dirt.src = "../../../assets/platformer/dirt.png";
+	dirt.onload = () => {tiles.dirt = dirt; console.log(`${getLoadedTiles()} / ${Object.keys(tiles).length} loaded - finished load of dirt tile`)};
+	
+	// grass
+
+	let grass = new Image(tile.width, tile.height);
+	grass.src = "../../../assets/platformer/grass.png";
+	grass.onload = () => {tiles.grass = grass; console.log(`${getLoadedTiles()} / ${Object.keys(tiles).length} loaded - finished load of grass tile`)}
+})();
+
+
+
+
+function setMainLoop() {
+	mainLoop = setInterval(() => {
+		// updateWorld();
+		player.update();
+
 		renderLevel(maps[level - 1]);
 
-		loadingSprites = false;
-	}
-}, 1000 / fps);
+		player.draw();
+	}, 1000 / fps);
+}
 
 
-
-(() => { // define the tiles
-	let dirt = new Image(20, 20);
-
-	dirt.src = "../../../assets/platformer/dirt.png";
-
-	dirt.onload = () => {tiles.dirt = dirt; console.log("loaded")}
-})();
+function getLoadedTiles() {
+	return Object.values(tiles).filter(value => typeof value !== "undefined").length;
+}

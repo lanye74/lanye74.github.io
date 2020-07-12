@@ -1,10 +1,17 @@
 function renderLevel(level) {
+
+	ctx.translate(0, 0);
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+	ctx.translate(-player.pos.x, -player.pos.y);
+	
 	for(let y = 0; y < level.length; y++) {
 		for(let x = 0; x < level[y].length; x++) {
 			let tile = level[y][x];
 
 			if(tile === 0) {draw(tiles.sky, x, y);}
 			if(tile === 1) {draw(tiles.dirt, x, y);}
+			if(tile === 2) {draw(tiles.grass, x, y);}
 		}
 	}
 }
