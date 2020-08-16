@@ -1,5 +1,3 @@
-
-
 tileCheckLoop = setInterval(() => {
 	if(!Object.values(tiles).includes(undefined)) { // if no tiles are undefined
 		loadingSprites = false; // false if all loaded exist
@@ -12,6 +10,8 @@ tileCheckLoop = setInterval(() => {
 		// efficiency is king. Even though it's really not necessary to have a seperate loop,
 		// as processing power is really good now, optimization is just- *chef's kiss*
 
+		// tl;dr I didn't see a reason to have keep those if's at the top, and check them 60 times a second.
+
 		console.log("All tiles loaded, beginning to draw!");
 
 		player = new Player(0, 0);
@@ -19,7 +19,7 @@ tileCheckLoop = setInterval(() => {
 		clearInterval(tileCheckLoop);
 		setMainLoop();
 	}
-}, 1000 / 10); // 10 times/sec
+}, 1000 / 5); // 5 times/sec
 
 
 
@@ -59,5 +59,5 @@ function setMainLoop() {
 
 
 function getLoadedTiles() {
-	return Object.values(tiles).filter(value => typeof value !== "undefined").length;
+	return Object.values(tiles).filter(value => typeof value !== "undefined").length; // this stupid line took me far too long
 }
