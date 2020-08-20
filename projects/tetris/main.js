@@ -5,7 +5,7 @@ let updater;
 
 
 
-let gravity = new Fraction("0+1/2");
+let gravity = new Fraction("0+1/3");
 
 
 
@@ -18,7 +18,7 @@ let matrix = new Matrix(canv.width, canv.height, undefined, ctx, 32);
 let currentPiece;
 
 
-let pieceSprites = loadPieces("ijlostz");
+let pieceSprites = loadPieces();
 
 pieceSprites.then(sprites => {
 	pieces = createPieces(gravity, sprites);
@@ -47,7 +47,7 @@ function update() {
 	}
 
 
-	console.log("updating")
+	//console.log("updating")
 	currentPiece.handleCollisions(matrix, pieces);
 	matrix.draw();
 	currentPiece.draw();

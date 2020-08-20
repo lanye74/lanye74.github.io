@@ -10,7 +10,7 @@ class Fraction {
 		counter.whole += this.whole;
 		counter.numer += this.numer;
 
-		counter.update();
+		counter.selfCorrect();
 	}
 }
 
@@ -21,7 +21,7 @@ class FractionCounter extends Fraction {
 		super(fraction);
 	}
 
-	update() {
+	selfCorrect() {
 		while(this.numer >= this.denom) {
 			this.numer -= this.denom;
 			this.whole++;

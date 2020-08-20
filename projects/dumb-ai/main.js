@@ -3,6 +3,7 @@ const ctx = canvas.getContext("2d");
 
 
 const aiCircles = [];
+let updater;
 
 
 
@@ -21,15 +22,17 @@ function update() {
 	ctx.fillStyle = "#ff0000"
 
 	aiCircles.forEach(circle => {
-		// circle.update(mousePos);
+		circle.update();
 		circle.draw(ctx);
 	});
 
 
-	requestAnimationFrame(update);
+	updater = requestAnimationFrame(update); // updater is also a frame count
 }
 
 
 
 init(50, 16);
+
+
 update();

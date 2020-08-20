@@ -61,6 +61,7 @@ class Tetrimino {
 		});
 
 		if(collided) {
+			debugger
 			console.log("collided", this.name)
 			piecePositions.forEach(row => {
 				row.forEach(coord => {
@@ -124,7 +125,7 @@ function createPieces(gravity, sprites) {
 };
 
 
-function loadPieces(pieceString) {
+function loadPieces(pieceString = "ijlostz") {
 	return new Promise((resolve, reject) => {
 		let completed = 0;
 
