@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+		"watch": true,
+		"target": "ESNext",
+		"lib": ["DOM", "ES2017"],
+		"removeComments": false
+	},
+	"files": [
+		"projects/tic-tac-toe/main.ts"
+	]
+}

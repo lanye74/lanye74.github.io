@@ -12,7 +12,7 @@ projects.forEach(tile => {
 	});
 });
 
-skipper.addEventListener("click", _ => {
+skipper.addEventListener("click", () => {
 	
 });
 

@@ -36,3 +36,17 @@ init(50, 16);
 
 
 update();
+
+
+
+
+
+// for debug
+let circles = {
+	highlightVel: (x, y, highlightStatus, signed = true) => {
+		return ((signed === true) ? 
+			aiCircles.filter(circle => (circle.vel.x === x || circle.vel.x === -x) && (circle.vel.y === y || circle.vel.y === -y)) :
+			aiCircles.filter(circle => (circle.vel.x === x) && (circle.vel.y === y))
+		).forEach(circle => circle.highlighted = highlightStatus);
+	}
+}

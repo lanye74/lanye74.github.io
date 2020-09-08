@@ -43,27 +43,25 @@ class AICircle {
 		this.pos.y += this.vel.y;
 	}
 
-	draw(ctx) {
+	draw(ctx) { // a dumb function that can surely be done better
 		let inner = new Path2D(), outer = new Path2D(); // saves a line or two
 
 		
-		if(this.highlighted) {ctx.save(); ctx.fillStyle = "#00ff00"}
+		if(this.highlighted) {ctx.fillStyle = "#00ff00"}
+		else {ctx.fillStyle = "#ff0000"}
 
-		inner.arc(this.pos.x, this.pos.y, this.size, 0, 2 * Math.PI);
+		inner.arc(this.pos.x, this.pos.y, this.size, 0, 2 * Math.PI); // main circle
 		ctx.fill(inner);
 
-		if(this.highlighted) {ctx.restore()}
+		if(this.highlighted) {ctx.fillStyle = "#ff0000"}
 
 
-		outer.arc(this.pos.x, this.pos.y, this.size, 0, Math.PI * 2);
+
+		outer.arc(this.pos.x, this.pos.y, this.size, 0, Math.PI * 2); // border
 		ctx.stroke(outer);
 
 
-		ctx.save();
-
-		ctx.fillStyle = "#000000";
-		ctx.fillRect(this.pos.x - 2, this.pos.y - 2, 4, 4);
-
-		ctx.restore();
+		ctx.fillStyle = "#000000"; // inner square
+		ctx.fillRect(this.pos.x - 2, this.pos.y - 2, this.size / 4, this.size / 4);
 	}
 }

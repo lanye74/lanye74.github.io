@@ -1,1 +1,4 @@
 .vscode/
+./test.js
+./test.ts
+./tsconfig.json
