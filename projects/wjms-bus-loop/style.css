@@ -92,7 +92,7 @@ button:focus:not(:active)::after {
 }
 
 
-#autoUpdate:checked + #update {
+#autoUpdate:checked ~ #update {
 	display: none;
 }
 
