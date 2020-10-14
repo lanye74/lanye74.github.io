@@ -1,0 +1,99 @@
+@font-face {
+	font-family: "Lato";
+	src: url("https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wXg.woff2") format("woff2");
+
+	font-display: swap;
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2") format("woff2");
+
+	font-display: swap;
+	font-style: normal;
+	font-weight: 400;
+}
+
+
+@keyframes ripple {
+	from {
+		opacity: 1;
+		transform: scale(0);
+	}
+	to {
+		opacity: 0;
+		transform: scale(10);
+	}
+}
+
+* {
+	font: 18px Roboto;
+}
+
+
+
+
+
+
+
+
+
+
+
+h1 {
+	font: 32px Lato;
+	font-weight: bold;
+}
+
+
+button {
+	display: inline-block;
+
+	border-radius: 0.6em;
+	border: none;
+	outline: none;
+
+	background: #1d6feb;
+	color: white;
+
+	padding: 0.6em;
+
+	cursor: pointer;
+
+	position: relative;
+
+	overflow: hidden;
+}
+	
+button::after {
+	display: none;
+	content: "";
+	position: absolute;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.2);
+
+	width: 100px;
+	height: 100px;
+	margin-top: -50px;
+	margin-left: -50px;
+
+	top: 50%;
+	left: 50%;
+
+	animation: ripple 1s;
+	opacity: 0;
+}
+
+
+button:focus:not(:active)::after {
+	display: block;
+}
+
+
+#autoUpdate:checked + #update {
+	display: none;
+}
+
+

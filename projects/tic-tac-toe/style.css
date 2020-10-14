@@ -14,7 +14,7 @@ table {
 }
 
 table:not([started]) {
-	filter: blur(3vw);
+	filter: blur(2vw);
 
 	pointer-events: none;
 }
@@ -87,21 +87,21 @@ td[state=" "] > .o {
 
 
 
-td[state="x"] > .x {
+td[state="X"] > .x {
 	display: block;
 }
 
-td[state="x"] > .o {
+td[state="X"] > .o {
 	display: none;
 }
 
 
 
-td[state="o"] > .x {
+td[state="O"] > .x {
 	display: none;
 }
 
-td[state="o"] > .o {
+td[state="O"] > .o {
 	display: block;
 }
 

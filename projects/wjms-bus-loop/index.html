@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>WJMS Bus Loop</title>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="A simple app informing you of bus arrivals.">
+
+		<link rel="stylesheet" href="style.css">
+
+
+		<!-- Firebase setup -->
+
+		<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-database.js"></script>
+
+
+		<script>
+			const firebaseConfig = {
+				apiKey: "AIzaSyAIcb3XFV6FdysxY-2osfKIIpfX0mFAh-U",
+				authDomain: "wjms-bus-loop-358cd.firebaseapp.com",
+				databaseURL: "https://wjms-bus-loop-358cd.firebaseio.com",
+				projectId: "wjms-bus-loop-358cd",
+				storageBucket: "wjms-bus-loop-358cd.appspot.com",
+				messagingSenderId: "637320334416",
+				appId: "1:637320334416:web:4fb4573e3eab8ea9ba5555"
+			};
+
+			firebase.initializeApp(firebaseConfig);
+		</script>
+		
+
+		<script defer src="main.js"></script>
+	</head>
+	<body>
+		<h1>Firebase Demo</h1>
+		<p>Current numbers:</p>
+		<ul id="list"></ul>
+
+		
+		<button id="generate">Add a new number!</button><br /><br /><br />
+
+
+		Pull from database automatically?
+		<input id="autoUpdate" type="checkbox">
+		<button id="update">Update</button>
+	</body>
+</html>

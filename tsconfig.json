@@ -1,8 +1,9 @@
 {
 	"compilerOptions": {
-		"watch": true,
-		"target": "ESNext",
 		"lib": ["DOM", "ES2017"],
+		"target": "ESNext",
+		"watch": true,
+
 		"removeComments": false
 	},
 	"files": [
