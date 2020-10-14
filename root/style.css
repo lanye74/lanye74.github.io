@@ -1,3 +1,4 @@
+/*
 text-container, tile-container {
 	padding: 3em 10% 3em 10%;
 }
@@ -30,7 +31,7 @@ text-container p {
 
 
 
-text-container { /* allows this to not be useless */
+text-container {
 	display: flex;
 	flex-direction: column;
 }
@@ -82,3 +83,4 @@ skipper.hidden {
 
 	pointer-events: none;
 }
+*/

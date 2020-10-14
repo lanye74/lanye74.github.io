@@ -1,3 +1,4 @@
+/*
 @keyframes arrowDown {
 	from {
 		transform: translateY(calc(-1.5 * var(--medium-y-offset))) translateX(-50%);
@@ -75,3 +76,4 @@ text-container p:nth-child(3) {
 tile-container tile:nth-child(1) {
 	animation-delay: calc(4 * var(--slow-speed));
 }
+*/

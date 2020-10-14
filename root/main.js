@@ -1,3 +1,4 @@
+/*
 const skipper = Array.from(document.getElementsByTagName("skipper"))[0];
 const projects = Array.from(document.getElementsByTagName("tile"));
 const animated = Array.from(document.querySelectorAll("[ani]"));
@@ -19,3 +20,4 @@ skipper.addEventListener("click", () => {
 document.body.onload = () => {
 	document.body.classList.add("loaded");
 }
+*/
