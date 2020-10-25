@@ -6,7 +6,5 @@
 
 		"removeComments": false
 	},
-	"files": [
-		"projects/tic-tac-toe/main.ts"
-	]
+	"files": []
 }
