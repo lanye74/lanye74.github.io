@@ -31,19 +31,23 @@
 		</script>
 		
 
+		<script defer src="database.js"></script>
 		<script defer src="main.js"></script>
 	</head>
 	<body>
 		<h1>Bus Loop Demo</h1>
-		<p>Current numbers:</p>
-		<ul id="list"></ul>
 
-		
-		<button id="generate">Add a new number!</button><br /><br /><br />
+		<div class="drop-zone">
+			<div id="item1" class="drop-item">Item 1!</div>
+		</div>
 
+		<div class="drop-zone">
+			<div id="item2" class="drop-item">Item 2!</div>
+		</div>
 
-		Pull from database automatically?
-		<input id="autoUpdate" type="checkbox"><br /><br />
-		<button id="update">Update</button>
+		<table id="bus-loop">
+			<tr id="bl-row1"><td>hi</td><td>hi</td></tr>
+			<tr id="bl-row2"><td>hi2</td><td>hi2</td></tr>
+		</table>
 	</body>
 </html>

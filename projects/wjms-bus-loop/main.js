@@ -1,48 +1,49 @@
-const db = firebase.database();
-db.item = db.ref;
+const dropZones = Array.from(document.getElementsByClassName("drop-zone"));
+const dropItems = Array.from(document.getElementsByClassName("drop-item"));
+let isMoving = false;
 
 
-let buses = {
-	132: {row: 1, col: 5},
-	561: {row: 2, col: 3}
+
+dropZones.forEach(zone => {
+	zone.ondrop = e => drop(e);
+	zone.ondragover = e => allowDrop(e);
+
+	zone.ondragenter = e => receiveItemAnim(e);
+	zone.ondragleave = e => removeItemAnim(e);
+});
+
+dropItems.forEach(item => {
+	item.draggable = "true";
+	item.ondragstart = e => drag(e);
+});
+
+
+
+
+function allowDrop(e) {
+	e.preventDefault();
 }
 
-
-//#region listeners for DB update
-db.item("random_number").on("child_added", data => {
-	update("remote");
-});
-
-db.item("random_number").on("child_changed", data => {
-	update("remote");
-});
-
-db.item("random_number").on("child_removed", data => {
-	update("remote");
-});
-
-db.item("random_number").on("child_moved", 	data => {
-	update("remote");
-});
-//#endregion
-
-
-function update(location) {
-	db.item("buses").once("value", busloop => {
-		busloop.forEach(bus => {
-			console.log(bus);
-		});
-	});
+function drag(e) {
+	console.log(e);
+	e.dataTransfer.setData("text", e.target.id);
+	// need to swap with other too
 }
 
+function drop(e) {
+	let data = e.dataTransfer.getData("text");
+	e.preventDefault();
+	e.target.appendChild(document.getElementById(data));
 
-/**
- * Todo: typescript pog?
- * 
- * What: Use TS
- * Why: Because it's better, also I can create BusObject interfaces {number, row, col}
- * When: whenever
- * How: npm install firebase
- * 
- * let buses: {[key: number]: object} = {}
- */
+	removeItemAnim(e);
+}
+
+function receiveItemAnim(e) {
+	if(e.target.classList.contains("drop-zone"))
+		e.target.classList.add("hovered");
+}
+
+function removeItemAnim(e) {
+	if(e.target.classList.contains("drop-zone"))
+		e.target.classList.remove("hovered");
+}

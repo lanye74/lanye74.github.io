@@ -92,8 +92,28 @@ button:focus:not(:active)::after {
 }
 
 
-#autoUpdate:checked ~ #update {
-	display: none;
+/* table {
+	border-collapse: collapse;
+} */
+
+
+.drop-item {
+	cursor: grab;
+}
+
+.drop-item:active {
+	cursor: grabbing;
 }
 
 
+.drop-zone {
+	padding: 1em;
+	border: 1px dashed black;
+
+	transition: border 0.25s, background 0.2s;
+}
+
+.drop-zone.hovered {
+	border: 1px dashed #cccccc;
+	background: #aaaaaa;
+}
