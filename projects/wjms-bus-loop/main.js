@@ -34,7 +34,6 @@ function drop(e) {
 
 	let dragged = document.getElementById(e.dataTransfer.getData("text"));
 	let target = e.target;
-	console.log(target.childNodes);
 	
 	// if the drop zone was targeted
 	if(target.classList.contains("drop-zone")) {
@@ -45,8 +44,6 @@ function drop(e) {
 	// targeted item directly
 	let draggedParent = dragged.parentElement;
 	let targetParent = target.parentElement;
-
-	console.log({dragged, draggedParent, target, targetParent});
 
 	draggedParent.appendChild(target); // replace with target
 	draggedParent.removeChild(dragged); // remove the moved element
