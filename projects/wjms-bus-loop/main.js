@@ -25,18 +25,39 @@ function allowDrop(e) {
 }
 
 function drag(e) {
-	console.log(e);
 	e.dataTransfer.setData("text", e.target.id);
-	// need to swap with other too
 }
 
 function drop(e) {
-	let data = e.dataTransfer.getData("text");
 	e.preventDefault();
-	e.target.appendChild(document.getElementById(data));
-
 	removeItemAnim(e);
+
+	let dragged = document.getElementById(e.dataTransfer.getData("text"));
+	let target = e.target;
+	console.log(target.childNodes);
+	
+	// if the drop zone was targeted
+	if(target.classList.contains("drop-zone")) {
+		target = target.children[0];
+		// make sure that the target is the drop item
+	}
+
+	// targeted item directly
+	let draggedParent = dragged.parentElement;
+	let targetParent = target.parentElement;
+
+	console.log({dragged, draggedParent, target, targetParent});
+
+	draggedParent.appendChild(target); // replace with target
+	draggedParent.removeChild(dragged); // remove the moved element
+
+	targetParent.appendChild(dragged); // add moved element to target
+	// no idea why I don't have to remove the old target
 }
+
+
+
+
 
 function receiveItemAnim(e) {
 	if(e.target.classList.contains("drop-zone"))
