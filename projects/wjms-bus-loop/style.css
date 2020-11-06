@@ -107,13 +107,6 @@ button:focus:not(:active)::after {
 
 
 .drop-zone {
-	padding: 1em;
-	border: 1px dashed black;
-
-	transition: border 0.25s, background 0.2s;
-}
-
-.drop-zone.hovered {
-	border: 1px dashed #cccccc;
-	background: #aaaaaa;
+	padding: 1.5em;
+	border: 1px solid black;
 }

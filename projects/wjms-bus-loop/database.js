@@ -2,44 +2,46 @@ const db = firebase.database();
 db.item = db.ref;
 
 
-const localBuses = [];
+let localBuses = [];
+let loopInfo;
 
+db.item("loop-info").once("value", s => loopInfo = s.val());
 
 //#region listeners for DB update
+// child_added will initiate the DB load by triggering for each bus
 db.item("buses").on("child_added", data => {
-	update("cloud");
+	updateDB("cloud");
 });
 
 db.item("buses").on("child_changed", data => {
-	update("cloud");
+	updateDB("cloud");
 });
 
 db.item("buses").on("child_removed", data => {
-	update("cloud");
+	updateDB("cloud");
 });
 
 db.item("buses").on("child_moved", 	data => {
-	update("cloud");
+	updateDB("cloud");
 });
 //#endregion
 
 
-function update(updateLocation) {
+function updateDB(updateLocation) {
 	db.item("buses").once("value", cloudBuses => { // get snapshot of bus items
-		cloudBuses.val().forEach((cloudVal, busIndex) => { // iterate over each item of the bus array
-			if(updateLocation === "cloud") { // update was from cloud, so change the local value
-				localBuses[busIndex] = cloudVal;
-			}
+		if(updateLocation === "cloud") { // update was from cloud, so change the local value
+			localBuses = cloudBuses.val();
+		}
 
-			if(updateLocation === "local") { // update was local, mirror change to cloud
-				db.item(`buses/${busIndex}`).set(localBuses[busIndex]);
-			}
-		});
+		if(updateLocation === "local") { // update was local, mirror change to cloud
+			db.item("buses").set(localBuses);
+		}
 	});
+
+	if(updateDisplay && updateLocation === "cloud") {
+		updateDisplay();
+	}
 }
-
-
-update("cloud"); // intital pull
 
 /**
  * Todo: typescript pog?
