@@ -8,8 +8,6 @@ let dropItems = Array.from(document.getElementsByClassName("drop-item"));
 
 
 
-
-
 function drop(e) {
 	//#region handle item drop
 	e.preventDefault();
@@ -43,7 +41,6 @@ function drop(e) {
 	//#region update localbuses accordingly
 	localBuses = [];
 
-	debugger;
 
 	Array.from(row1.children).forEach((child, index) => {
 		if(child.children.length > 0) {
@@ -74,7 +71,7 @@ function drop(e) {
 function updateDisplay() {
 	//#region adjust column #
 	db.item("loop-info").once("value", s => loopInfo = s.val());
-	
+
 	let oldBusColumns = row1.children.length;
 	let columnsToChange = 0;
 	
