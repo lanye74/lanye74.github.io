@@ -17,27 +17,9 @@
 }
 
 
-@keyframes ripple {
-	from {
-		opacity: 1;
-		transform: scale(0);
-	}
-	to {
-		opacity: 0;
-		transform: scale(10);
-	}
-}
-
 * {
 	font: 18px Roboto;
 }
-
-
-
-
-
-
-
 
 
 
@@ -48,56 +30,15 @@ h1 {
 }
 
 
-button {
-	display: inline-block;
 
-	border-radius: 0.6em;
-	border: none;
-	outline: none;
-
-	background: #1d6feb;
-	color: white;
-
-	padding: 0.6em;
-
-	cursor: pointer;
-
-	position: relative;
-
-	overflow: hidden;
+table {
+	border-collapse: separate;
 }
-	
-button::after {
-	display: none;
-	content: "";
-	position: absolute;
-	border-radius: 50%;
-	background-color: rgba(0, 0, 0, 0.2);
-
-	width: 100px;
-	height: 100px;
-	margin-top: -50px;
-	margin-left: -50px;
-
-	top: 50%;
-	left: 50%;
-
-	animation: ripple 1s;
-	opacity: 0;
-}
-
-
-button:focus:not(:active)::after {
-	display: block;
-}
-
-
-/* table {
-	border-collapse: collapse;
-} */
 
 
 .drop-item {
+	width: max-content;
+	margin: auto;
 	cursor: grab;
 }
 
@@ -107,6 +48,7 @@ button:focus:not(:active)::after {
 
 
 .drop-zone {
-	padding: 1.5em;
+	width: 5em;
+	height: 3.75em;
 	border: 1px solid black;
 }
