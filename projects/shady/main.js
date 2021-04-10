@@ -1,58 +1,67 @@
-const tabContainer = document.getElementsByTagName("tab-heads")[0];
-const tabs = Array.from(document.getElementsByTagName("tab-head")); // converts into iterable array
-const content = document.getElementsByTagName("tab-content")[0]; // same here
+const tabs = Array.from(document.getElementsByTagName("tab-head"));
 const shades = Array.from(document.getElementsByTagName("color"));
-const texts = Array.from(document.getElementsByTagName("text"));
-
-let origText = "";
-let textOut = false;
-let textIn = false;
-
-const transitionTime = parseFloat(getCSSVar("fast-speed").slice(1, 4));
-
-tabs.forEach(tab => {
-	tab.addEventListener("click", e => {
-		if(tab.id === "home") {
-			window.location.href = window.location.origin;
-
-			return;
-		}
-
-		tabs.forEach(header => {(header.className === "active") ? header.removeAttribute("class") : null}); // removes "active" from all the others (if it's there)
-
-		tab.className = "active"; // sets current one to
-
-		shades.forEach(color => {
-			color.id = `${e.target.id.slice(0, 1)}${color.id.slice(1, 2)}`; /* css transitions it by itself because  y a y */
-		});
-	});
-});
-
+const homeButton = document.getElementById("home");
 shades.forEach(color => {
-	color.addEventListener("click", e => {
-		let temp = document.createElement("input");	// doing this so I can copy
-		document.body.appendChild(temp); // append
-
-		temp.value = pad(color); // set the value to that of the element's "padded" value
-		temp.select(); temp.setSelectionRange(0, 9999); document.execCommand("copy"); // select (setSelectionRange is for mobile) and copy
-
-		document.body.removeChild(temp); // remove; don't need to set display to none since it gets poofed immediately
-	});
+    color.addEventListener("click", copyColor);
+    color.style.setProperty("--order", " " +
+        (parseInt(color.id.slice(1, 2), 16)
+            + 1)
+            .toString());
 });
-
-function pad(el) {
-	switch(el.id.slice(0, 1)) {
-		case "r": {
-			return `#${(el.id.slice(1, 2)).repeat(2)}0000`;
-		}
-		case "g": {
-			return `#00${(el.id.slice(1, 2)).repeat(2)}00`;
-		}
-		case "b": {
-			return `#0000${(el.id.slice(1, 2)).repeat(2)}`;
-		}
-		case "w": {
-			return `#${(el.id.slice(1, 2)).repeat(6)}`;
-		}
-	}
+tabs.forEach(tab => {
+    tab.addEventListener("click", updateActiveTab);
+});
+function copyColor(e) {
+    const cover = e.target;
+    const color = cover.parentElement;
+    let tempInput = document.createElement("input");
+    document.body.appendChild(tempInput);
+    tempInput.value = hexFromID(color.id);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+}
+function updateActiveTab(e) {
+    const target = e.target;
+    for (const tab of tabs) {
+        tab.classList.remove("active");
+        if (tab.id === target.id) {
+            tab.classList.add("active");
+        }
+        if (target.id === "home") {
+            window.location.href = window.location.origin;
+        }
+    }
+    updateBodyContents(target.id);
+}
+function updateBodyContents(id) {
+    const newType = id.slice(0, 1);
+    for (const color of shades) {
+        let oldHue = color.id.slice(1, 2);
+        color.id = newType + oldHue;
+    }
+}
+function hexFromID(id) {
+    let color = id.slice(0, 1);
+    let value = id.slice(1, 2);
+    switch (color) {
+        case "r":
+            {
+                return `#${value.repeat(2)}0000`;
+            }
+            ;
+        case "g":
+            {
+                return `#00${value.repeat(2)}00`;
+            }
+            ;
+        case "b":
+            {
+                return `#0000${value.repeat(2)}`;
+            }
+            ;
+        case "w": {
+            return `#${value.repeat(6)}`;
+        }
+    }
 }

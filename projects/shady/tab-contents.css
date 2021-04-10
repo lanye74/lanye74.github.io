@@ -8,17 +8,24 @@ tab-container {
 	position: absolute;
 }
 
+
+
 tab-content {
 	display: grid;
 
-	grid-template-columns: repeat(auto-fit, minmax(var(--shade-size), 1fr));
+	grid-template-columns: repeat(auto-fit, var(--shade-size));
+	justify-content: center;
+	column-gap: 4rem;
+	
 	grid-template-rows: auto;
-	gap: 1rem;
+	row-gap: 4rem;
 
 	font-size: 150%;
 
-	padding: 2.5rem;
+	padding: 3rem;
 }
+
+
 
 tab-content#default { /* Other tab contents are grids; this overrides */
 	display: flex;
@@ -29,11 +36,15 @@ tab-content#default { /* Other tab contents are grids; this overrides */
 }
 
 
-h1#logo {
-	text-shadow: 0 0 5px #eeea;
 
+h1#logo {
+	margin-top: 0.5em;
+
+	text-shadow: 0 0 5px #eeea;
 	transition: text-shadow var(--fast-speed);
 }
+
+
 
 h1#logo:hover {
 	text-shadow: 0 0 7px #eeec;

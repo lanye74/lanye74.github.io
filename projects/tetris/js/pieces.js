@@ -61,7 +61,6 @@ class Tetrimino {
 		});
 
 		if(collided) {
-			debugger
 			console.log("collided", this.name)
 			piecePositions.forEach(row => {
 				row.forEach(coord => {

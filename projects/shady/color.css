@@ -17,7 +17,11 @@ color { /* aaaaa */
 	border-radius: var(--shade-border-radius);
 }
 
-cover {
+
+
+color::after {
+	content: "";
+
 	border-radius: var(--shade-border-radius);
 
 	position: absolute;
@@ -33,9 +37,12 @@ cover {
 	z-index: 2;
 }
 
+
+
 color text {
-	transition: opacity var(--fast-speed);
 	opacity: 0;
+	
+	transition: opacity var(--fast-speed);
 	
 	padding: 15px; /* extend bounding box */
 
@@ -44,13 +51,19 @@ color text {
 	font-size: 30px;
 }
 
+
+
 color:hover {
 	transform: scale(var(--hover-scale-amount));
 }
 
-color:hover cover, color:hover text {
+
+
+color:hover::after, color:hover text {
 	opacity: 1;
 }
+
+
 
 #w0 {
 	background-color: #000;

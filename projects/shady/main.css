@@ -7,19 +7,25 @@
 	--scale-begin: 0.7;
 }
 
+
+
 span, h1 {
 	width: initial;
 	height: initial;
 }
+
+
 
 color, tab-heads {
 	user-select: none;
 }
 
 
+
 tab-heads {
 	font-family: Lato !important;
 }
+
 
 
 #logo-text, #logo-sub-text {

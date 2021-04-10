@@ -12,6 +12,8 @@ tab-heads {
 	background: var(--background-color);
 }
 
+
+
 tab-head {
 	height: 100%; /* Relative to the container */
 
@@ -29,9 +31,13 @@ tab-head {
 	color: var(--text-color);
 }
 
+
+
 tab-head:hover {
 	background: var(--dark-accent);
 }
+
+
 
 tab-head.active {
 	background: var(--medium-accent);
@@ -39,14 +45,19 @@ tab-head.active {
 	cursor: default;
 }
 
+
+
 tab-head.active:hover {
 	background: var(--light-accent);
 }
 
 
+
 tab-head {
 	width: calc(calc(100% - var(--home-width)) / 4);
 }
+
+
 
 tab-head#home {
 	width: var(--home-width);

@@ -5,7 +5,7 @@ let updater;
 
 
 
-let gravity = new Fraction("0+1/3");
+let gravity = new Fraction("0+1/16");
 
 
 

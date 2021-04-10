@@ -20,12 +20,12 @@ html, body {
 	--medium-accent: #363636;
 	--light-accent: #3b3b3b;
 
-	--hover-scale-amount: 1.03;
+	--hover-scale-amount: 1.05;
 
-	--short-delay: 0.15s;
+	--short-delay: 150ms;
 
-	--fast-speed: 0.3s;
-	--medium-speed: 0.6s;
+	--fast-speed: 300ms;
+	--medium-speed: 600ms;
 	--slow-speed: 1s;
 	--very-slow-speed: 2s;
 

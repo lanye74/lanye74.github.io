@@ -13,8 +13,16 @@
 
 color {
 	animation: scaleFade var(--fast-speed) ease-out backwards;
+	animation-delay: calc(calc(var(--order) * 150ms) + 1800ms);
 }
 
-tab-heads tab-head {
+tab-head {
 	animation: fadeIn var(--medium-speed) ease-out backwards;
+	animation-delay: 300ms;
+}
+
+
+tab-content#default {
+	animation: fadeIn var(--slow-speed) ease-in-out backwards;
+	animation-delay: 900ms;
 }

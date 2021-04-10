@@ -1,10 +1,11 @@
 {
 	"compilerOptions": {
-		"lib": ["DOM", "ES2017"],
+		"lib": ["DOM", "ESNext"],
 		"target": "ESNext",
 		"watch": true,
 
 		"removeComments": false
 	},
-	"files": []
+
+	"include": ["projects/**/*"]
 }
