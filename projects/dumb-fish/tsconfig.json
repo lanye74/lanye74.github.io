@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"lib": ["DOM", "ESNext"],
+		"target": "ESNext",
+		"watch": true,
+
+		"removeComments": false,
+
+		"rootDir": "./ts",
+		"outDir": "./js"
+	},
+
+	"include": ["./ts"]
+}

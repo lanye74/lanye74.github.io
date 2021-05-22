@@ -13,7 +13,7 @@
 
 color {
 	animation: scaleFade var(--fast-speed) ease-out backwards;
-	animation-delay: calc(calc(var(--order) * 150ms) + 1800ms);
+	animation-delay: calc(calc(var(--order) * 150ms) + 1850ms);
 }
 
 tab-head {

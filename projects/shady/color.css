@@ -31,7 +31,6 @@ color::after {
 	background: #000a;
 
 	opacity: 0;
-
 	transition: opacity var(--fast-speed);
 
 	z-index: 2;
@@ -41,14 +40,12 @@ color::after {
 
 color text {
 	opacity: 0;
-	
 	transition: opacity var(--fast-speed);
 	
-	padding: 15px; /* extend bounding box */
+	font-size: 30px;
+	padding: 1em; /* extend bounding box */
 
 	z-index: 3;
-
-	font-size: 30px;
 }
 
 

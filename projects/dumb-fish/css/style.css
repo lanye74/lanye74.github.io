@@ -1,0 +1,66 @@
+@font-face {
+	font-family: "Lato";
+	src: url("https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wXg.woff2") format("woff2");
+
+	font-display: swap;
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2") format("woff2");
+
+	font-display: swap;
+	font-style: normal;
+	font-weight: 400;
+}
+
+
+
+body {
+	background-color: #282828;
+	color: #eeeeee;
+
+	padding: 0;
+	margin: 0;
+}
+
+
+
+* {
+	font: 1em Roboto;
+}
+
+
+
+#container {
+	position: absolute;
+
+	left: 50%;
+	top: 50%;
+
+	transform: translate(-50%, -50%);
+
+	display: block;
+}
+
+
+
+chess-board {
+	display: block;
+
+	width: 1000px;
+	height: 1000px;
+
+
+	background-image: url("../assets/board.svg");
+}
+
+
+#eval {
+	font-size: 2em;
+	text-align: center;
+
+	margin: 0.25em;
+}

@@ -69,7 +69,7 @@ function drop(e) {
 
 
 function updateDisplay() {
-	//#region adjust column #
+	//#region adjust column
 	db.item("loop-info").once("value", s => loopInfo = s.val());
 
 	let oldBusColumns = row1.children.length;
