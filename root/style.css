@@ -91,21 +91,25 @@ h1 {
 	position: absolute;
 	top: 50%; left: 50%;
 	transform: translate(-50%, -50%);
+}
 
-	animation: glow 3s infinite;
+h1.glow {
+	color: transparent;
+	animation: glow 5s infinite;
+	text-shadow: 0 0 8px #eeea;
 }
 
 
 @keyframes glow {
 	0% {
-		text-shadow: 0 0 5px #eeea;
+		opacity: 0%;
 	}
 
 	50% {
-		text-shadow: 0 0 9px #eeec;
+		opacity: 100%;
 	}
 
 	100% {
-		text-shadow: 0 0 5px #eeea;
+		opacity: 0%;
 	}
 }
