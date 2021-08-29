@@ -16,9 +16,9 @@
 
 		"removeComments": false,
 
-		"rootDir": "./sourcedir",
-		"outDir": "./compdir"
+		"rootDir": "./ts",
+		"outDir": "./js"
 	},
 
-	"include": ["./sourcedir"]
+	"include": ["./ts"]
 }

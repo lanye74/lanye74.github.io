@@ -2,6 +2,9 @@ html, body {
 	padding: 0;
 	margin: 0;
 
+	min-height: 100%;
+	height: 100%;
+
 	background: var(--background-color);
 	color: var(--text-color);
 
@@ -9,7 +12,7 @@ html, body {
 }
 
 :root {
-	--background-color: #282828;
+	--background-color: #242424;
 	
 	--text-color-selection: #eeeeeefe; /* barely lower alpha so browser doesn't screw it */
 	--text-color: #eeeeee;
@@ -19,6 +22,9 @@ html, body {
 	--dark-accent: #313131;
 	--medium-accent: #363636;
 	--light-accent: #3b3b3b;
+	--very-light-accent: #424242;
+	--lightest-accent: #6c6c6c;
+	/* the brightest it can be, given the #eee text color, that passes WCAG AA (not AAA, though) */
 
 	--hover-scale-amount: 1.05;
 
@@ -45,11 +51,12 @@ html, body {
 	--rect-tile-height: 200px;
 }
 
+
+
 ::selection {
 	background-color: var(--text-color-selection);
 	color: var(--background-color);
 }
-
 
 
 
@@ -172,7 +179,6 @@ body::-webkit-scrollbar-track {
 
 
 
-
 h1 {
 	font-size: 300%;
 
@@ -200,6 +206,7 @@ h2 {
 
 	font-size: 250%;
 }
+
 
 
 divider {

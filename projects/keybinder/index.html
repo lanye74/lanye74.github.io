@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Keybinder</title>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Easily view, load, and store keybinds for different profiles.">
+
+		
+		<link rel="stylesheet" href="../../shared/shared.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/grid.css">
+
+		<link rel="stylesheet" href="css/grid-components/header.css">
+		<link rel="stylesheet" href="css/grid-components/overview.css">
+		<link rel="stylesheet" href="css/grid-components/keyboard.css">
+		<link rel="stylesheet" href="css/grid-components/editor.css">
+		<link rel="stylesheet" href="css/grid-components/drawer.css">
+
+
+		<script defer src="js/main.js" type="module"></script>
+	</head>
+	<body>
+		<div id="grid">
+			<div id="header"></div>
+
+			<div id="keyboard">
+				<table id="numkeys">
+					<td class="s1-1" id="`">`</td>
+					<td class="s1-1" id="1">1</td>
+					<td class="s1-1" id="2">2</td>
+					<td class="s1-1" id="3">3</td>
+					<td class="s1-1" id="4">4</td>
+					<td class="s1-1" id="5">5</td>
+					<td class="s1-1" id="6">6</td>
+					<td class="s1-1" id="7">7</td>
+					<td class="s1-1" id="8">8</td>
+					<td class="s1-1" id="9">9</td>
+					<td class="s1-1" id="0">9</td>
+					<td class="s1-1" id="-">-</td>
+					<td class="s1-1" id="=">=</td>
+					<td class="s2-1" id="backspace">←</td>
+				</table>
+
+				<table id="qwerty">
+					<td class="s3-2" id="tab">Tab</td>
+					<td class="s1-1" id="q">Q</td>
+					<td class="s1-1" id="w">W</td>
+					<td class="s1-1" id="e">E</td>
+					<td class="s1-1" id="r">R</td>
+					<td class="s1-1" id="t">T</td>
+					<td class="s1-1" id="y">Y</td>
+					<td class="s1-1" id="u">U</td>
+					<td class="s1-1" id="i">I</td>
+					<td class="s1-1" id="o">O</td>
+					<td class="s1-1" id="p">P</td>
+					<td class="s1-1" id="[">[</td>
+					<td class="s1-1" id="]">]</td>
+					<td class="s3-2" id="\">\</td>
+				</table>
+
+				<table id="asdfgh">
+					<td class="s4-3" id="capslock">Caps Lock</td>
+					<td class="s1-1" id="a">A</td>
+					<td class="s1-1" id="s">S</td>
+					<td class="s1-1" id="d">D</td>
+					<td class="s1-1" id="f">F</td>
+					<td class="s1-1" id="g">G</td>
+					<td class="s1-1" id="h">H</td>
+					<td class="s1-1" id="j">J</td>
+					<td class="s1-1" id="k">K</td>
+					<td class="s1-1" id="l">L</td>
+					<td class="s1-1" id=";">;</td>
+					<td class="s1-1" id="'">'</td>
+					<td class="s9-4" id="enter">Enter</td>
+				</table>
+
+				<table id="zxcvbn">
+					<td class="s9-4" id="lshift">Shift</td>
+					<td class="s1-1" id="z">Z</td>
+					<td class="s1-1" id="x">X</td>
+					<td class="s1-1" id="c">C</td>
+					<td class="s1-1" id="v">V</td>
+					<td class="s1-1" id="b">B</td>
+					<td class="s1-1" id="n">N</td>
+					<td class="s1-1" id="m">M</td>
+					<td class="s1-1" id=",">,</td>
+					<td class="s1-1" id=".">.</td>
+					<td class="s1-1" id="/">/</td>
+					<td class="s11-4" id="rshift">Shift</td>
+				</table>
+
+				<table id="special">
+					<td class="s3-2" id="lctrl">Ctrl</td>
+					<td class="s1-1" id="lwin">Win</td>
+					<td class="s3-2" id="lalt">Alt</td>
+					<td class="s6-1" id="space"> </td>
+					<td class="s3-2" id="ralt">Alt</td>
+					<td class="s1-1" id="rwin">Win</td>
+					<td class="s1-1" id="menu">Menu</td>
+					<td class="s3-2" id="rctrl">Ctrl</td>
+				</table>
+			</div>
+
+			<div id="overview"></div>
+
+			<div id="editor"></div>
+
+			<div id="drawer">
+				<!-- this will have save, export, load, json view, color scheme viewer, etc -->
+			</div>
+		</div>
+	</body>
+</html>

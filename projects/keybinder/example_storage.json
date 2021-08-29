@@ -1,0 +1,58 @@
+{
+	"keysets": {
+		"asdasda": {
+			"description": "Test keybinds",
+			"context": "Funni game",
+			"keys": {
+				"A": {
+					"name": "asdfgh",
+					"color": "#ff0000",
+					"tag": "movement"
+				}
+			},
+
+			"colorTransparency": 100
+		},
+
+
+		"Magician's Red Hamon": {
+			"description": "Keybinds for MR Hamon",
+			"context": "YBA",
+			"borrows": ["Basic Movement"],
+			"keys": {
+				"Z": {
+					"name": "Red Bind",
+					"color": "#ff2000",
+					"tag": "Utility"
+				}
+			},
+
+			"colorTransparency": 20
+		},
+
+		"Basic Movement": {
+			"description": "Basic movement keys",
+			"context": "Borrowed",
+			"keys": {
+				"W": {
+					"color": "asd",
+					"tag": "movement"
+				},
+				"A": {
+					"color": "asd",
+					"tag": "movement"
+				},
+				"S": {
+					"color": "asd",
+					"tag": "movement"
+				},
+				"D": {
+					"color": "asd",
+					"tag": "movement"
+				}
+			}
+		}
+	},
+
+	"user": "LayneTheEpic"
+}
