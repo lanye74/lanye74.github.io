@@ -1,1 +1,6 @@
-#editor {}
+#editor {
+	background: var(--dark-accent);
+
+	border-top-left-radius: 2em;
+	border-bottom-left-radius: 2em;
+}

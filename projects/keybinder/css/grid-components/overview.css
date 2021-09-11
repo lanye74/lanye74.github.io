@@ -1,1 +1,6 @@
-#overview {}
+#overview {
+	background: var(--dark-accent);
+
+	border-top-right-radius: 2em;
+	border-bottom-right-radius: 2em;
+}

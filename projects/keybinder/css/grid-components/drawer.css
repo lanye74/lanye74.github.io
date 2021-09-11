@@ -1,1 +1,16 @@
-#drawer {}
+#drawer {
+	background: var(--dark-accent);
+
+	border-top-left-radius: 2em;
+	border-top-right-radius: 2em;
+}
+
+#drawer::before {
+	content: "";
+	width: 1em;
+	height: 0.2em;
+
+	border-radius: 1em;
+
+	color: var(--not-black);
+}

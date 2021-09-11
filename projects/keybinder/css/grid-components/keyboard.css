@@ -5,11 +5,16 @@
 
 	justify-content: center;
 	align-items: center;
+
+
+	padding: 3em;
+
+	border-radius: 2em;
 }
 
 
 
-table {
+#keyboard table {
 	border-collapse: collapse;
 
 	width: 100%;
@@ -17,15 +22,13 @@ table {
 	table-layout: fixed;
 
 	aspect-ratio: 15 / 1;
+
+	background-color: var(--background-color);
 }
 
-table:not(:last-child) td {
-	border-bottom: none;
-}
 
 
-
-td {
+#keyboard table td {
 	box-sizing: border-box;
 	border: 1px solid var(--grayer-color);
 
@@ -39,36 +42,44 @@ td {
 	transition: background var(--short-delay);
 }
 
-td:hover {
+#keyboard table:not(:last-child) td {
+	border-bottom: none;
+}
+
+#keyboard table tr td:not(:last-child) {
+	border-right: none;
+}
+
+#keyboard table td:hover {
 	background: var(--medium-accent) !important;
 }
 
 
 
 .s1-1 {
-	width: calc(100% / 15);
+	width: calc(100% / 15); /* the golden ratio */
 }
 
 .s3-2 {
-	width: 10%;
+	width: calc(calc(3 / 2) * calc(100% / 15));
 }
 
-.s4-3 {
-	width: calc(11% + calc(100% / 150));
+.s7-4 {
+	width: calc(calc(7 / 4) * calc(100% / 15));
 }
 
 .s2-1 {
-	width: calc(100% / 7.5);
+	width: calc(calc(2 / 1) * calc(100% / 15));
 }
 
 .s9-4 {
-	width: 15%;
+	width: calc(calc(9 / 4) * calc(100% / 15));
 }
 
 .s11-4 {
-	width: calc(18% + (100% / 300));
+	width: calc(calc(11 / 4) * calc(100% / 15));
 }
 
 .s6-1 {
-	width: 40%;
+	width: calc(calc(6 / 1) * calc(100% / 15));
 }

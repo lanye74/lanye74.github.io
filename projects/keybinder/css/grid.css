@@ -4,13 +4,15 @@
 	width: 100vw;
 	height: 100vh;
 
-	grid-template-rows: 7.5% 72.5% 20%;
-	grid-template-columns: 17.5% 57.5% 25%;
+	grid-template-rows: 10fr 45fr 35fr;
+	grid-template-columns: 17.5fr 57.5fr 25fr;
 
 	grid-template-areas:
 		"header header header"
 		"overview keyboard editor"
 		"overview drawer editor";
+	
+	gap: 3em;
 }
 
 
