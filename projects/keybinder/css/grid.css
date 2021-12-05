@@ -4,8 +4,8 @@
 	width: 100vw;
 	height: 100vh;
 
-	grid-template-rows: 10fr 45fr 35fr;
-	grid-template-columns: 17.5fr 57.5fr 25fr;
+	grid-template-rows: 10fr 55fr 25fr;
+	grid-template-columns: 17.5fr 67.5fr 25fr;
 
 	grid-template-areas:
 		"header header header"

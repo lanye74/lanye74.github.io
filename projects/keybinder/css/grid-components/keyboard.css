@@ -30,16 +30,18 @@
 
 #keyboard table td {
 	box-sizing: border-box;
-	border: 1px solid var(--grayer-color);
+	border: 2px solid var(--grayer-color);
 
 	text-align: center;
-	font-weight: 450;
+	font-weight: 500;
 	font-size: calc(calc(1.5vw + 1vh) / 2);
 
 	user-select: none;
 	cursor: pointer;
 	
 	transition: background var(--short-delay);
+
+	--width-ratio: calc(100% / 15); /* the golden ratio */
 }
 
 #keyboard table:not(:last-child) td {
@@ -57,29 +59,29 @@
 
 
 .s1-1 {
-	width: calc(100% / 15); /* the golden ratio */
+	width: var(--width-ratio);
 }
 
 .s3-2 {
-	width: calc(calc(3 / 2) * calc(100% / 15));
+	width: calc(calc(3 / 2) * var(--width-ratio));
 }
 
 .s7-4 {
-	width: calc(calc(7 / 4) * calc(100% / 15));
+	width: calc(calc(7 / 4) * var(--width-ratio));
 }
 
 .s2-1 {
-	width: calc(calc(2 / 1) * calc(100% / 15));
+	width: calc(calc(2 / 1) * var(--width-ratio));
 }
 
 .s9-4 {
-	width: calc(calc(9 / 4) * calc(100% / 15));
+	width: calc(calc(9 / 4) * var(--width-ratio));
 }
 
 .s11-4 {
-	width: calc(calc(11 / 4) * calc(100% / 15));
+	width: calc(calc(11 / 4) * var(--width-ratio));
 }
 
 .s6-1 {
-	width: calc(calc(6 / 1) * calc(100% / 15));
+	width: calc(calc(6 / 1) * var(--width-ratio));
 }

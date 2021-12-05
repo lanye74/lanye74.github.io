@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>PokeMeow Captcha Solver</title>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="/shared/shared.css">
+
+
+		<script defer src="main.js"></script>
+	</head>
+	<body>
+		<label for="fileUploader" id="label">Upload image</label>
+		<input id="fileUploader" type="file" onchange="processFile(this.files[0])" accept="image/*" />
+		<br />
+		<canvas id="canvas"></canvas>
+	</body>
+</html>

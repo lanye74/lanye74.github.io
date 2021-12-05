@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"module": "ESNext",
+
+		"strict": true,
+		"noImplicitAny": true,
+		"strictNullChecks": true,
+		"strictFunctionTypes": true,
+		"strictPropertyInitialization": true,
+		"noImplicitThis": true,
+		"alwaysStrict": true,
+
+		"lib": ["ESNext", "DOM"],
+
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true
+	},
+
+	"include": ["main.ts"]
+}
