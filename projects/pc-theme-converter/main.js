@@ -11,7 +11,6 @@ async function processCSS(event) {
     for (const [key, value] of Object.entries(jsonData)) {
         text = text.replaceAll(key, value);
     }
-    // console.log(text);
     navigator.clipboard.writeText(text);
     document.getElementById("copied").classList.add("appear");
 }
