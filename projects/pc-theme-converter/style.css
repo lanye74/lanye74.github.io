@@ -1,0 +1,82 @@
+body {
+	display: flex;
+
+	flex-direction: column;
+
+	align-items: center;
+}
+
+/* this is ass but I'm working quickly, not good-ly */
+#container {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: space-evenly;
+
+	width: 20em;
+	height: 100%;
+}
+
+#sub-container {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: space-evenly;
+
+	width: 100%;
+
+	height: 10em;
+}
+
+
+
+#label {
+	padding: 1em;
+	background: #13c07e;
+	border-radius: 1em;
+
+	font: 38px Lato;
+	font-weight: bold;
+
+	text-align: center;
+}
+
+
+
+#copied {
+	text-align: center;
+
+	font-size: 2em;
+
+	opacity: 0;
+
+	animation: none;
+}
+
+#copied.appear {
+	animation: appearBriefly 5s;
+}
+
+
+
+#fileUploader {
+	display: none;
+}
+
+@keyframes appearBriefly {
+	0% {
+		opacity: 0;
+	}
+
+	7% {
+		opacity: 1;
+	}
+
+	93% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}

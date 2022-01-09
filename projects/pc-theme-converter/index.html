@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Stupid PC Theme Fixer</title>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Fixes your stupid powercord thing aslkfjfdskljlsfkdfjklsd">
+
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="/shared/shared.css">
+
+
+		<script defer src="main.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="sub-container">
+				<label for="fileUploader" id="label">Upload file</label>
+				<input id="fileUploader" type="file" onchange="processFile(this.files[0])">
+
+				<p id="copied">Copied! (this text won't appear on subsequent files)</p>
+			</div>
+		</div>
+	</body>
+</html>
