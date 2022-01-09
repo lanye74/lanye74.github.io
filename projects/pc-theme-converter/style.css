@@ -1,60 +1,31 @@
-body {
-	display: flex;
-
-	flex-direction: column;
-
-	align-items: center;
-}
-
 /* this is ass but I'm working quickly, not good-ly */
 #container {
+	position: absolute;
+
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+
+
 	display: flex;
 	flex-direction: column;
 
-	justify-content: space-evenly;
-
-	width: 25em;
-	height: 100%;
-}
-
-#sub-container {
-	display: flex;
-	flex-direction: column;
-
-	justify-content: space-evenly;
-
-	width: 100%;
-
-	height: 10em;
+	justify-content: center;
+	align-items: center;
 }
 
 
 
 #label {
 	padding: 1em;
-	background: #13c07e;
+	background: #1572b6;
 	border-radius: 1em;
 
-	font: 38px Lato;
+	font: 2.5em Lato;
 	font-weight: bold;
 
 	text-align: center;
-}
-
-
-
-#copied {
-	text-align: center;
-
-	font-size: 2em;
-
-	opacity: 0;
-
-	animation: none;
-}
-
-#copied.appear {
-	animation: appearBriefly 5s;
 }
 
 
@@ -63,20 +34,64 @@ body {
 	display: none;
 }
 
-@keyframes appearBriefly {
+
+
+#saveOptions {
+	padding-top: 2em;
+
+	opacity: 0;
+
+	animation: fade 0.5s;
+	animation-fill-mode: forwards;
+}
+
+#saveOptions.show {
+	animation: appear 0.5s;
+	animation-fill-mode: forwards;
+
+}
+
+
+
+@keyframes appear {
 	0% {
 		opacity: 0;
+		pointer-events: none;
 	}
 
-	7% {
+	100% {
 		opacity: 1;
+		pointer-events: all;
 	}
+}
 
-	93% {
+@keyframes fade {
+	0% {
 		opacity: 1;
+		pointer-events: all;
 	}
 
 	100% {
 		opacity: 0;
+		pointer-events: none;
 	}
+}
+
+
+
+.downloadMethod {
+	font-size: 1em;
+	border: none;
+
+	background: #1572b6;
+
+	padding: 0.5em;
+
+	font: 1em Lato;
+	font-weight: bold;
+
+	text-align: center;
+
+	color: #eeeeee;
+	border-radius: 0.75em;
 }
