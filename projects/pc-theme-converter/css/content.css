@@ -1,0 +1,70 @@
+#content {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center;
+
+	transition: opacity 1s;
+}
+
+
+
+#label {
+	padding: 1em;
+	background: #1572b6;
+	border-radius: 1em;
+
+	font: 2.5em Lato;
+	font-weight: bold;
+
+	text-align: center;
+
+	cursor: pointer;
+}
+
+
+
+#saveOptions {
+	margin-top: 2em;
+
+	transition: opacity 0.5s;
+
+	display: flex;
+	justify-items: right;
+}
+
+#saveOptions :first-child {
+	margin-right: 1em;
+}
+
+.downloadMethod {
+	font-size: 1em;
+	border: none;
+
+	background: #1572b6;
+
+	padding: 0.5em;
+
+	font: 1.25em Lato;
+	font-weight: bold;
+
+	text-align: center;
+
+	color: #eeeeee;
+	border-radius: 0.75em;
+
+	cursor: pointer;
+}
+
+
+
+#fileUploader {
+	display: none;
+}
+
+
+
+#downloader {
+	display: none;
+}
