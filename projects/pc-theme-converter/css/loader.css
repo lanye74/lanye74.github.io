@@ -1,0 +1,44 @@
+#loaderContainer {
+	transition: opacity 1s;
+}
+
+#loading {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	margin: 0;
+
+	font-size: 150%;
+
+	animation: loadingShakeBlink 1s infinite alternate linear;
+}
+
+
+
+@keyframes loadingShakeBlink { /* Manual easing because ease-in-out doesn't play nice with having more than 2 steps */
+	0% {
+		transform: translate(-50%, -50%) rotate(-5deg);
+		opacity: 0.75;
+	}
+
+	20% {
+		transform: translate(-50%, -50%) rotate(-4deg);
+		opacity: 0.8;
+	}
+
+	50% {
+		transform: translate(-50%, -50%) rotate(0);
+		opacity: 1;
+	}
+
+	80% {
+		transform: translate(-50%, -50%) rotate(4deg);
+		opacity: 0.8;
+	}
+
+	100% {
+		transform: translate(-50%, -50%) rotate(5deg);
+		opacity: 0.75;
+	}
+}
