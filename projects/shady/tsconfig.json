@@ -2,7 +2,6 @@
 	"compilerOptions": {
 		"lib": ["DOM", "ESNext"],
 		"target": "ESNext",
-		"watch": true,
 
 		"strict": true,
 		"noImplicitAny": true,
@@ -15,10 +14,7 @@
 		"forceConsistentCasingInFileNames": true,
 
 		"removeComments": false,
-
-		"rootDir": "./sourcedir",
-		"outDir": "./compdir"
 	},
 
-	"include": ["./sourcedir"]
+	"include": ["./main.ts"]
 }

@@ -1,11 +1,11 @@
+"use strict";
 const tabs = Array.from(document.getElementsByTagName("tab-head"));
 const colorElements = Array.from(document.getElementsByTagName("color"));
 const homeButton = document.getElementById("home");
 colorElements.forEach(color => {
     color.addEventListener("click", copyOnClick);
-    color.style.setProperty("--order", " " +
-        (parseInt(color.id.slice(1, 2), 16))
-            .toString());
+    // order the color elements from their hexadecimal ids
+    color.style.setProperty("--order", ` ${(parseInt(color.id.slice(1, 2), 16)).toString()}`);
 });
 tabs.forEach(tab => {
     tab.addEventListener("click", updateActiveTab);
@@ -23,13 +23,8 @@ function copyOnClick(e) {
     }
     copyToClipboard(shadeHexFromID(hexToParse));
 }
-function copyToClipboard(value) {
-    let tempInput = document.createElement("input");
-    document.body.appendChild(tempInput);
-    tempInput.value = value;
-    tempInput.select();
-    document.execCommand("copy");
-    document.body.removeChild(tempInput);
+async function copyToClipboard(value) {
+    await navigator.clipboard.writeText(value);
 }
 function updateActiveTab(e) {
     const target = e.target;
@@ -77,5 +72,8 @@ function shadeHexFromID(id) {
                 return `#${value.repeat(6)}`;
             }
             ;
+        default: {
+            throw new Error("ayo wtf");
+        }
     }
 }

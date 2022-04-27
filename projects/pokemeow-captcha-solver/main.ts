@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d")!;
 
 
 
-async function processFile(file: File): Promise<void> {
+async function processFile(file: File) {
 	const image = new Image();
 
 	image.src = URL.createObjectURL(file);
@@ -22,7 +22,7 @@ async function processFile(file: File): Promise<void> {
 
 
 
-function convertToBackgroundless(): void {
+function convertToBackgroundless() {
 	const {data} = ctx.getImageData(0, 0, canvas.width, canvas.height);
 	const rawPixelArray = [];
 

@@ -6,12 +6,9 @@ const homeButton = document.getElementById("home");
 
 colorElements.forEach(color => {
 	color.addEventListener("click", copyOnClick);
-	color.style.setProperty("--order", " " +
-		(
-			parseInt(color.id.slice(1, 2), 16)
-		)
-		.toString()
-	);
+
+	// order the color elements from their hexadecimal ids
+	color.style.setProperty("--order", ` ${(parseInt(color.id.slice(1, 2), 16)).toString()}`)
 });
 
 
@@ -22,16 +19,16 @@ tabs.forEach(tab => {
 
 
 
-function copyOnClick(e: MouseEvent): void {
+function copyOnClick(e: MouseEvent) {
 	const target = <HTMLElement>e.target;
-	let hexToParse;
+	let hexToParse: string;
 
-	if(target.parentElement.id === "colors") { // in case it somehow clicks through
+	if(target.parentElement!.id === "colors") { // in case it somehow clicks through
 		// color element targeted directly
 		hexToParse = target.id;
 	} else {
 		// ::after targeted
-		hexToParse = target.parentElement.id;
+		hexToParse = target.parentElement!.id;
 	}
 
 	copyToClipboard(shadeHexFromID(hexToParse));
@@ -39,20 +36,13 @@ function copyOnClick(e: MouseEvent): void {
 
 
 
-function copyToClipboard(value) {
-	let tempInput = document.createElement<"input">("input");
-	document.body.appendChild(tempInput);
-
-	tempInput.value = value;
-
-	tempInput.select();
-	document.execCommand("copy");
-	document.body.removeChild(tempInput);
+async function copyToClipboard(value: string) {
+	await navigator.clipboard.writeText(value);
 }
 
 
 
-function updateActiveTab(e: MouseEvent): void {
+function updateActiveTab(e: MouseEvent) {
 	const target = <HTMLElement>e.target;
 
 	for(const tab of tabs) {
@@ -72,7 +62,7 @@ function updateActiveTab(e: MouseEvent): void {
 
 
 
-function updateBodyContents(id: string): void {
+function updateBodyContents(id: string) {
 	const newType = id.slice(0, 1);
 
 	for(const color of colorElements) {
@@ -85,12 +75,12 @@ function updateBodyContents(id: string): void {
 
 
 
-function shadeHexFromID(id: string): string {
+function shadeHexFromID(id: string) {
 	const color = id.slice(0, 1);
 	const value = id.slice(1, 2);
 
 	const doubledVal = value.repeat(2);
-	
+
 
 	switch(color) {
 		case "r": {
@@ -108,5 +98,9 @@ function shadeHexFromID(id: string): string {
 		case "w": {
 			return `#${value.repeat(6)}`;
 		};
+
+		default: {
+			throw new Error("ayo wtf");
+		}
 	}
 }

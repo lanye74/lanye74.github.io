@@ -37,7 +37,7 @@ window.onload = async () => { // could be async but I like .then :)
 
 
 
-async function processFile(file: File): Promise<void> {
+async function processFile(file: File) {
 	const reader = new FileReader();
 
 	reader.onload = processCSS;
@@ -49,7 +49,7 @@ async function processFile(file: File): Promise<void> {
 
 
 
-async function processCSS(event: ProgressEvent<FileReader>): Promise<void> {
+async function processCSS(event: ProgressEvent<FileReader>) {
 	if(url) {
 		URL.revokeObjectURL(url);
 	}
@@ -68,7 +68,7 @@ async function processCSS(event: ProgressEvent<FileReader>): Promise<void> {
 
 
 
-async function copyToClipboard(): Promise<void> {
+async function copyToClipboard() {
 	await navigator.clipboard.writeText(text);
 
 	toggleVisibility("saveOptions");
@@ -76,7 +76,7 @@ async function copyToClipboard(): Promise<void> {
 
 
 
-function downloadAsFile(): void {
+function downloadAsFile() {
 	const blob = new Blob([text], {
 		type: "text/plain"
 	});
@@ -95,7 +95,7 @@ function downloadAsFile(): void {
 
 
 
-function toggleVisibility(what: string): void {
+function toggleVisibility(what: string) {
 	if(!elements[what]) return;
 
 	elements[what].classList.toggle("show");
