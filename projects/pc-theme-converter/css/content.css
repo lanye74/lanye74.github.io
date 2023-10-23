@@ -5,17 +5,31 @@
 	justify-content: center;
 	align-items: center;
 
-	transition: opacity 1s;
+
+	height: 100%;
+	width: 100%;
+
+	gap: 3rem;
+
 }
 
 
 
-#label {
-	padding: 1em;
-	background: #1572b6;
-	border-radius: 1em;
+#made-by {
+	font: italic normal normal 1.25rem Lato;
+	text-align: center;
 
-	font: 2.5em Lato;
+	margin: 0;
+}
+
+
+
+#upload-button {
+	background: var(--blue);
+	padding: 2rem;
+	border-radius: 1.5rem;
+
+	font: 2.5rem Lato;
 	font-weight: bold;
 
 	text-align: center;
@@ -25,41 +39,45 @@
 
 
 
-#save-options {
-	margin-top: 2em;
-
+#save-options-container {
 	transition: opacity 0.5s;
 
 	display: flex;
 	justify-items: right;
+
+	gap: 1rem;
 }
 
-#save-options :first-child {
-	margin-right: 1em;
-}
 
-.downloadMethod {
-	font-size: 1em;
+
+#save-options-container button {
+	font-size: 1.5rem;
+	padding: 1rem;
+
 	border: none;
+	border-radius: 1.25rem;
+	box-sizing: border-box;
 
-	background: #1572b6;
+	background: var(--blue);
 
-	padding: 0.5em;
-
-	font: 1.25em Lato;
+	font: 1.25rem Lato;
 	font-weight: bold;
-
 	text-align: center;
-
 	color: #eeeeee;
-	border-radius: 0.75em;
 
 	cursor: pointer;
 }
 
 
 
-#fileUploader {
+#save-options-container button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+
+
+#file-uploader {
 	display: none;
 }
 

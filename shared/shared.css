@@ -13,7 +13,7 @@ html, body {
 
 :root {
 	--background-color: #242424;
-	
+
 	--text-color-selection: #eeeeeefe; /* barely lower alpha so browser doesn't screw it */
 	--text-color: #eeeeee;
 	--grayer-color: #cccccc;
@@ -39,7 +39,7 @@ html, body {
 	--large-y-offset: 16px;
 	--medium-y-offset: 8px;
 	--small-y-offset: 4px;
-	
+
 	--scroll-thumb: #4d4d4d;
 	--scroll-track: #373737;
 

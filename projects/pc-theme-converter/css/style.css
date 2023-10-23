@@ -1,5 +1,7 @@
 :root {
-	font: max(16px, calc(0.8vmin + 0.3vmax)) Roboto;
+	font: max(16px, calc(0.8vmin + 0.5vmax)) Roboto;
+
+	--blue: hsl(205, 80%, 45%);
 }
 
 
@@ -10,8 +12,8 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 
-	width: max(20rem, 70vw);
-	height: min-content;
+	width: max(30rem, 45vw);
+	height: max(30rem, 20vh + 20vw);
 
 	background: var(--very-dark-accent);
 
@@ -21,12 +23,15 @@
 }
 
 
-.show {
-	opacity: 1;
-	pointer-events: all;
-}
 
 .hide {
 	opacity: 0;
 	pointer-events: none;
+	visibility: hidden;
+}
+
+
+
+.will-hide {
+	transition: opacity 1s, visibility 1s;
 }

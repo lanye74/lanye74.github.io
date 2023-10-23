@@ -1,0 +1,17 @@
+#progress-bar {
+	min-height: 0.5rem;
+	border-radius: 0.25rem;
+	width: 100%;
+
+	background-color: var(--very-light-accent);
+}
+
+
+
+#progress-bar-progress {
+	height: 100%;
+	width: 0%;
+
+	background-color: var(--blue);
+	border-radius: inherit;
+}

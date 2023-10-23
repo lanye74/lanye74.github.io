@@ -7,30 +7,33 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Updates your Powercord CSS files with the newest classes because Discord broke everything">
 
+		<link rel="stylesheet" href="/shared/shared.css">
+		<!-- overwrite old rem code -->
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/loader.css">
 		<link rel="stylesheet" href="css/content.css">
-		<link rel="stylesheet" href="/shared/shared.css">
+		<!-- <link rel="stylesheet" href="css/progress-bar.css"> -->
 
 
 		<script defer src="js/main.js"></script>
 	</head>
 	<body>
+		<p id="loading-text" class="will-hide">Loading...</p>
+
 		<div id="container">
 			<!-- add a header -->
+			<div id="content" class="hide will-hide">
+				<p id="made-by">Made with &lt;3 by lanye#9472 — v3.0.0</p>
+				<label for="file-uploader" id="upload-button" role="button">Upload a file</label>
+				<input id="file-uploader" type="file" onchange="processFile(this.files[0])">
 
-			<div id="loaderContainer">
-				<p id="loading">Loading...</p>
-			</div>
+				<!-- <div id="progress-bar">
+					<div id="progress-bar-progress"></div>
+				</div> -->
 
-			<div id="content" class="hide">
-				<p id="logo-sub-text">Made with &lt;3 by lanye#9472 — v2.0.0</p>
-				<label for="fileUploader" id="label">Upload a file</label>
-				<input id="fileUploader" type="file" onchange="processFile(this.files[0])">
-
-				<div id="save-options" class="hide">
-					<button class="downloadMethod" onclick="copyToClipboard()">Copy to clipboard</button>
-					<button class="downloadMethod" onclick="downloadAsFile()">Download as file</button>
+				<div id="save-options-container">
+					<button disabled onclick="copyToClipboard()">Copy to clipboard</button>
+					<button disabled onclick="downloadAsFile()">Download as file</button>
 				</div>
 			</div>
 		</div>

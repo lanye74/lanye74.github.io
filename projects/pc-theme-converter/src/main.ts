@@ -1,18 +1,10 @@
-type elementsTypeBecauseTypescriptIsStinky = {
-	content: HTMLElement;
-	downloader: HTMLAnchorElement;
-	loaderContainer: HTMLElement;
-	saveOptions: HTMLElement;
-	[key: string]: any;
-}
+const content = document.getElementById("content")!;
+const downloader = document.getElementById("downloader") as HTMLAnchorElement;
+const loadingText = document.getElementById("loading-text")!;
+const progressBarProgress = document.getElementById("progress-bar-progress")!;
 
-const elements: elementsTypeBecauseTypescriptIsStinky = { // I hate this
-	content: document.getElementById("content")!,
-	downloader: <HTMLAnchorElement>document.getElementById("downloader")!,
-	loaderContainer: document.getElementById("loaderContainer")!,
-	saveOptions: document.getElementById("save-options")!
-};
-
+const saveOptionsContainer = document.getElementById("save-options-container")!;
+const saveOptions = Array.from(saveOptionsContainer.children);
 
 
 
@@ -20,28 +12,31 @@ let text: string; // I hate global variables but I was too lazy to addEventListe
 let fileName: string;
 let url: string;
 
-let classesJSON: [string, string][]
+let classesJSON: [string, string][];
+let classesCount = 0;
 
 
 
-window.onload = async () => { // could be async but I like .then :)
-	classesJSON = Object.entries(await (
-		await fetch("./classes.json")
-		).json()
+window.onload = async () => {
+	classesJSON = Object.entries(
+		await (await fetch("./classes.json")).json()
 	);
 
+	classesCount = classesJSON.length;
 
-	toggleVisibility("loaderContainer");
-	toggleVisibility("content");
+
+	toggleVisibility(loadingText);
+	toggleVisibility(content);
 }
 
 
 
 async function processFile(file: File) {
+	disableSaveOptions(true);
+
 	const reader = new FileReader();
 
-	reader.onload = processCSS;
-
+	reader.addEventListener("load", processCSS);
 	reader.readAsText(file);
 
 	fileName = file.name;
@@ -49,7 +44,7 @@ async function processFile(file: File) {
 
 
 
-async function processCSS(event: ProgressEvent<FileReader>) {
+function processCSS(event: ProgressEvent<FileReader>) {
 	if(url) {
 		URL.revokeObjectURL(url);
 	}
@@ -57,21 +52,25 @@ async function processCSS(event: ProgressEvent<FileReader>) {
 	// source: bro just trust me
 	text = <string>event!.target!.result;
 
+	// let i = 0;
 
 	for(const [key, value] of classesJSON) {
 		text = text.replaceAll(key, value);
+		// i++;
+
+		// if(i % 10 === 0) {
+			// setProgressBarProgress(i);
+		// }
 	}
 
 
-	toggleVisibility("saveOptions");
+	disableSaveOptions(false);
 }
 
 
 
 async function copyToClipboard() {
 	await navigator.clipboard.writeText(text);
-
-	toggleVisibility("saveOptions");
 }
 
 
@@ -85,19 +84,30 @@ function downloadAsFile() {
 	url = URL.createObjectURL(blob);
 
 
-	elements.downloader.download = fileName;
-	elements.downloader.href = url;
+	downloader.download = fileName;
+	downloader.href = url;
 
-	elements.downloader.click();
-
-	toggleVisibility("saveOptions");
+	downloader.click();
 }
 
 
 
-function toggleVisibility(what: string) {
-	if(!elements[what]) return;
-
-	elements[what].classList.toggle("show");
-	elements[what].classList.toggle("hide");
+function toggleVisibility(element: HTMLElement) {
+	element.classList.toggle("hide");
 }
+
+
+
+function disableSaveOptions(state?: boolean) {
+	for(const saveOption of saveOptions) {
+		saveOption.toggleAttribute("disabled", state);
+	}
+}
+
+
+
+// function setProgressBarProgress(iteration: number) {
+// 	const percentage = `${iteration / classesCount * 100}%`;
+
+// 	progressBarProgress.style.width = percentage;
+// }
