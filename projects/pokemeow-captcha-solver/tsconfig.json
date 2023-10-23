@@ -13,9 +13,11 @@
 
 		"lib": ["ESNext", "DOM"],
 
-		"skipLibCheck": true,
-		"forceConsistentCasingInFileNames": true
+		"forceConsistentCasingInFileNames": true,
+
+		"rootDir": "./src",
+		"outDir": "./js"
 	},
 
-	"include": ["main.ts"]
+	"include": ["./src"]
 }

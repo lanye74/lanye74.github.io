@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
-		"lib": ["DOM", "ESNext"],
 		"target": "ESNext",
+		"module": "ESNext",
 
 		"strict": true,
 		"noImplicitAny": true,
@@ -11,10 +11,13 @@
 		"noImplicitThis": true,
 		"alwaysStrict": true,
 
+		"lib": ["ESNext", "DOM"],
+
 		"forceConsistentCasingInFileNames": true,
 
-		"removeComments": false,
+		"rootDir": "./src",
+		"outDir": "./js"
 	},
 
-	"include": ["./main.ts"]
+	"include": ["./src"]
 }
