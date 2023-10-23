@@ -10,7 +10,7 @@ const elements: elementsTypeBecauseTypescriptIsStinky = { // I hate this
 	content: document.getElementById("content")!,
 	downloader: <HTMLAnchorElement>document.getElementById("downloader")!,
 	loaderContainer: document.getElementById("loaderContainer")!,
-	saveOptions: document.getElementById("saveOptions")!
+	saveOptions: document.getElementById("save-options")!
 };
 
 

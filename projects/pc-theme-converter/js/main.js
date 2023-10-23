@@ -3,7 +3,7 @@ const elements = {
     content: document.getElementById("content"),
     downloader: document.getElementById("downloader"),
     loaderContainer: document.getElementById("loaderContainer"),
-    saveOptions: document.getElementById("saveOptions")
+    saveOptions: document.getElementById("save-options")
 };
 let text; // I hate global variables but I was too lazy to addEventListener
 let fileName;

@@ -25,7 +25,7 @@
 
 
 
-#saveOptions {
+#save-options {
 	margin-top: 2em;
 
 	transition: opacity 0.5s;
@@ -34,7 +34,7 @@
 	justify-items: right;
 }
 
-#saveOptions :first-child {
+#save-options :first-child {
 	margin-right: 1em;
 }
 

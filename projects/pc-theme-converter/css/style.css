@@ -1,16 +1,23 @@
+:root {
+	font: max(16px, calc(0.8vmin + 0.3vmax)) Roboto;
+}
+
+
+
 #container {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 
+	width: max(20rem, 70vw);
+	height: min-content;
+
 	background: var(--very-dark-accent);
 
-	padding: 8em;
-	border-radius: 4em;
-
-	/* dynamic font size = everything scales :) */
-	font-size: calc(calc(1.5vw + 1vh) / 2);
+	padding: 4rem 4rem;
+	border-radius: 4rem;
+	box-sizing: border-box;
 }
 
 
