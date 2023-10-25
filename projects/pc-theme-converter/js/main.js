@@ -30,8 +30,8 @@ function processCSS(event) {
     // source: bro just trust me
     text = event.target.result;
     // let i = 0;
-    for (const [key, value] of classesJSON) {
-        text = text.replaceAll(key, value);
+    for (const [oldClass, newClass] of classesJSON) {
+        text = text.replaceAll(oldClass, newClass);
         // i++;
         // if(i % 10 === 0) {
         // setProgressBarProgress(i);

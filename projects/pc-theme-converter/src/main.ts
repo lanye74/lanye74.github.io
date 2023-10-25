@@ -54,8 +54,8 @@ function processCSS(event: ProgressEvent<FileReader>) {
 
 	// let i = 0;
 
-	for(const [key, value] of classesJSON) {
-		text = text.replaceAll(key, value);
+	for(const [oldClass, newClass] of classesJSON) {
+		text = text.replaceAll(oldClass, newClass);
 		// i++;
 
 		// if(i % 10 === 0) {
