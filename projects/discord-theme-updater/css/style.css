@@ -12,13 +12,12 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 
-	width: max(30rem, 45vw);
-	height: max(30rem, 20vh + 20vw);
+	width: max(30rem, 45vmax);
+	height: max(30rem, 20vmin + 20vmax);
 
 	background: var(--very-dark-accent);
 
-	padding: 4rem 4rem;
-	border-radius: 4rem;
+	border-radius: 3rem;
 	box-sizing: border-box;
 }
 

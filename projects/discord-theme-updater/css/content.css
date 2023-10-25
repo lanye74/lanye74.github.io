@@ -15,11 +15,18 @@
 
 
 
-#made-by {
-	font: italic normal normal 1.25rem Lato;
+.info-text {
+	font: 1.25rem / 1.5 Lato;
 	text-align: center;
+	opacity: 0.9;
 
 	margin: 0;
+}
+
+
+
+.italic {
+	font-style: italic;
 }
 
 
